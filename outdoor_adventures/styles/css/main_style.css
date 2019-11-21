@@ -1,0 +1,241 @@
+/*comments in .scss file*/
+@keyframes slide_down {
+  0% {
+    bottom: 400px;
+    opacity: 0; }
+  100% {
+    bottom: -18.5vw;
+    opacity: 1; } }
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: lightgrey;
+  margin: 0; }
+  body p {
+    font-size: 12px; }
+  body main .menu_content {
+    z-index: 1;
+    display: none; }
+  body main header {
+    height: 55vw;
+    z-index: 2;
+    position: relative;
+    grid-column: 1/4;
+    grid-row: 1/2; }
+    body main header h1 {
+      display: none; }
+    body main header .logo {
+      position: absolute;
+      z-index: 3;
+      top: 70px;
+      left: 30vw;
+      margin: 0;
+      width: 35vw;
+      height: 35vw; }
+      body main header .logo img {
+        background-color: #ffffff6e;
+        width: 100%;
+        height: 100%; }
+@keyframes slide {
+  8% {
+    margin-left: 0px; }
+  16% {
+    margin-left: -100vw; }
+  24% {
+    margin-left: -100vw; }
+  32% {
+    margin-left: -200.5vw; }
+  40% {
+    margin-left: -200.5vw; }
+  48% {
+    margin-left: -301vw; }
+  56% {
+    margin-left: -301vw; }
+  64% {
+    margin-left: -401.5vw; }
+  72% {
+    margin-left: -401.5vw; }
+  80% {
+    margin-left: -502vw; }
+  88% {
+    margin-left: -502vw; } }
+    body main header .slideshow {
+      background-color: dimgrey;
+      width: 100%;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      height: 55vw; }
+      body main header .slideshow .slides {
+        animation: slide 30s ease infinite;
+        width: 602.5vw;
+        height: 100%; }
+        body main header .slideshow .slides .slide_content {
+          margin: 0;
+          display: inline-block;
+          width: 100vw;
+          height: 100%; }
+          body main header .slideshow .slides .slide_content img {
+            width: 100%;
+            height: 100%; }
+  body main nav {
+    background-color: dimgrey;
+    z-index: 3; }
+    body main nav a, body main nav span {
+      font-size: 2vw;
+      color: white;
+      padding: 25px 2.5vw;
+      text-decoration: none; }
+      body main nav a:hover, body main nav span:hover {
+        cursor: hand;
+        background-color: grey; }
+    body main nav .logo2 {
+      background-color: #ffffff6e;
+      vertical-align: middle;
+      height: 25px;
+      margin-right: 10px; }
+    body main nav .menu {
+      position: relative; }
+    body main nav .menu_content {
+      margin-left: 30px;
+      display: none;
+      position: absolute;
+      bottom: -18.5vw;
+      left: -40px;
+      background-color: #f9f9f9;
+      min-width: 160px; }
+      body main nav .menu_content a {
+        z-index: -1;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block; }
+        body main nav .menu_content a:hover {
+          background-color: #ddd;
+          text-shadow: 0px 2px 2px dimgrey; }
+    body main nav .menu:hover .menu_content {
+      display: block;
+      animation: slide_down 0.7s; }
+    body main nav * {
+      display: inline-block; }
+  body main .container {
+    width: 100%; }
+    body main .container .intro {
+      background-color: grey;
+      min-height: 10px;
+      padding: 15px; }
+    body main .container .content {
+      padding: 5px 10px; }
+      body main .container .content .selection {
+        padding-bottom: 20px;
+        text-align: center;
+        border-bottom: 2px solid dimgrey; }
+        body main .container .content .selection a {
+          color: black;
+          text-decoration: none;
+          display: inline-block;
+          vertical-align: top;
+          width: 45%; }
+          body main .container .content .selection a figure img {
+            border-radius: 120px;
+            width: 100%;
+            height: 100%; }
+      body main .container .content .break_img {
+        text-align: right;
+        margin: 0px 15%;
+        margin-top: 50px;
+        width: 65%; }
+        body main .container .content .break_img figcaption {
+          color: dimgrey; }
+        body main .container .content .break_img img {
+          width: 100%;
+          height: 100%; }
+      body main .container .content .catergory article {
+        padding-top: 55px; }
+    body main .container aside p {
+      width: 90%; }
+    body main .container aside article {
+      padding: 10px; }
+      body main .container aside article figure {
+        width: 75%; }
+        body main .container aside article figure img {
+          width: 100%;
+          height: 100%; }
+  body main footer {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    background-color: dimgrey; }
+    body main footer a {
+      text-decoration: none;
+      color: blue; }
+    body main footer ul {
+      list-style: none; }
+    body main footer p {
+      margin: 0px 10px;
+      font-size: 12px; }
+
+@media only screen and (min-device-width: 768px) {
+  body p {
+    font-size: 13px; }
+  body main .container .content .selection a {
+    width: 30%; }
+  body main aside article {
+    vertical-align: top;
+    display: inline-block;
+    width: 46%; }
+  body main footer p {
+    font-size: 13px; } }
+@media only screen and (min-device-width: 1020px) {
+  @keyframes slide_down {
+    0% {
+      bottom: 350px;
+      opacity: 0; }
+    100% {
+      bottom: -18vw;
+      opacity: 1; } }
+  body p {
+    font-size: 15px; }
+  body main header {
+    height: 555px; }
+    body main header .logo {
+      top: 10px;
+      left: 10px;
+      width: 150px;
+      height: 150px; }
+    body main header .slideshow {
+      height: 585px; }
+  body main nav a, body main nav span {
+    padding: 15px 25px; }
+  body main nav .logo2 {
+    vertical-align: middle;
+    height: 25px;
+    margin-right: 10px; }
+  body main nav .menu_content {
+    animation: slide_down 1s;
+    bottom: -18vw; }
+  body main .container .intro {
+    padding: 20px; }
+  body main .container .content .selection a {
+    width: 23%; }
+    body main .container .content .selection a figure {
+      margin: 10px; }
+  body main .container aside {
+    border-left: 2px solid dimgrey;
+    padding: 10px 3px; }
+    body main .container aside p {
+      font-size: 12px; }
+    body main .container aside article {
+      width: 90%;
+      padding: 10px; }
+      body main .container aside article figure {
+        margin: 0px;
+        width: 100%; }
+        body main .container aside article figure img {
+          width: 100%;
+          height: 100%; }
+  body main footer p {
+    font-size: 20px; } }
+
+/*# sourceMappingURL=main_style.css.map */

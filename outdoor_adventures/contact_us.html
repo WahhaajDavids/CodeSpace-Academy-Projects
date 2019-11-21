@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="view-port" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles/css/contact_style.css" type="text/css">
+    <link rel="icon" href="images/logo/icon1.ico">
+  </head>
+  <body>
+    <main>
+      <!-- the absolute logo -->
+      <figure class="logo">
+        <img src="images/logo/logo1.png" alt="logo">
+      </figure>
+      <!-- the navigation bar -->
+      <nav id="nav">
+        <!-- the home link and logo -->
+        <a href="index.html" ><img src="images/logo/logo1.png" alt="nav_icon" title="Home" class="logo2">Home</a>
+        <!-- the dropdown menu -->
+        <div class="menu">
+          <span>
+            <img src="" alt="Catergory" class="nav_icon">Gallery &#10515;
+          </span>
+          <!-- its content -->
+          <div class="menu_content" >
+            <a href="gallery.html#hike">Hiking</a>
+            <a href="gallery.html#fish">Fishing</a>
+            <a href="gallery.html#camp">Camping</a>
+            <a href="gallery.html#rock">Rock Climbing</a>
+          </div>
+
+        </div>
+        <a href="contact_us.html" style="background-color:grey;">Contact</a>
+      </nav>
+      <!-- the form to contact with -->
+      <form class="" action="/main.html" method="post">
+        <!-- fieldset for personal info -->
+        <fieldset>
+          <legend>Personal:</legend>
+          <p>Name:</p>
+          <input type="name" name="firstName" placeholder="First name" required>
+          <p>Surname:</p>
+          <input type="name" name="surname" placeholder="Surname" required>
+          <p>Gender:</p>
+          <ul>
+            <li>
+              <input type="radio" name="gender" checked><span>Male</span>
+            </li>
+            <li>
+              <input type="radio" name="gender" ><span>Female</span>
+            </li>
+          </ul>
+        </fieldset>
+        <!-- fieldset for contact info -->
+        <fieldset>
+          <legend>Contact:</legend>
+          <p>Email:</p>
+          <input type="email" name="Email" placeholder="Email">
+          <p>Contact Number:</p>
+          <input type="number" name="number" min="0" max="999999999">
+        </fieldset>
+        <!-- feildset to write a message -->
+        <fieldset>
+          <legend>Message:</legend>
+          <p>Reason for Contact:</p>
+          <select class="reason" name="reason">
+            <option selected disabled>Please Select A value  </option>
+            <option value="work">Work</option>
+            <option value="holiday">Holiday</option>
+            <option value="trip">Trip</option>
+            <option value="training">Training</option>
+            <option value="other">Other</option>
+          </select>
+
+          <p>Write to Us:</p>
+          <textarea name="write" rows="14" cols="80" maxlength="400"></textarea>
+        </fieldset>
+
+        <!-- submit button -->
+        <input type="submit" name="submit" class="button" onclick="javascript:alert('The form is being processed.')">
+
+        <!-- reset button -->
+        <input type="reset" name="reset" class="button" onclick="javascript:alert('The form is being reset.')">
+
+      </form>
+    </main>
+
+  </body>
+</html>

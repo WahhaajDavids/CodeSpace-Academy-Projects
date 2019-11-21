@@ -1,0 +1,840 @@
+/* comments in .scss file */
+// variables
+  // to be used for images
+@mixin images {
+  width: 100%;
+  height: 100%;
+}
+
+// gives an over line for the headings
+@mixin overline {
+  span{
+    margin-top: -5px;
+    border-top:solid blue 2px;
+  }
+}
+
+// google fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+// gives a global color of the text
+body{
+  // allows for scroll related fuctions
+  height: 100vh;
+  overflow: auto;
+
+  // color and fonts
+  color: white;
+  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+
+  // to remove the the sides and bottom
+  margin: 0px;
+  main{
+    // gives smooth scrolling
+    scroll-behavior: smooth;
+    // so that the screen does not increase in size
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    header{
+      z-index: 1;
+      // moves the div up and left
+      // hides the open spaces
+      margin-top: -87px;
+      margin-left: -80px;
+
+      width: 200%;
+      // gives a collapsed look
+      transform: rotate(8deg);
+      overflow: hidden;
+      // border for effect
+      border-bottom: 2px solid white;
+      // for a box shadow
+      box-shadow: 0px 0px 20px 6px #012d6f;
+      -webkit-box-shadow: 0px 0px 20px 6px #012d6f;
+      .header_content{
+        z-index: 0;
+        // moves the content back to the screen
+        margin-top: 80px;
+        margin-left: 83px;
+        margin-right: 0px;
+        // to conform to the screen size
+        transform: rotate(-8deg);
+        width: 100vw;
+        position: relative;
+        height: 340px;
+        // the mobile view navbar
+        nav{
+          // border to right
+          border-right: solid #010c1f 3px;
+          z-index: 3;
+          height: 50px;
+          width: 90%;
+          // bg-color
+            // in  case the shade does not work
+            background-color: #010c1f;
+          background-color: #010c1f80;
+          background-color: rgba(1, 12, 31, 0.5019607843137255);
+          // to make a space on top
+          top: 35px;
+          position: absolute;
+          .menu{
+            position: relative;
+            // the button on the nav bar
+            button{
+              margin: 6px;
+              position: absolute;
+              right: 0px;
+              padding: 2px;
+              background-color: transparent;
+              border: none;
+              outline:none;
+              figure{
+                width: 35px;
+                margin: 0px;
+                img{
+                  // opacity and transition
+                  opacity: 0.7;
+                  // image mixin at top
+                  @include images;
+                  &:hover{
+                    opacity: 1;
+                  }
+                }
+              }
+              // on hover
+            }
+            #menu_content{
+              display: none;
+              // positioning
+              position: absolute;
+              top: 50px;
+              z-index: 1;
+              width: 100%;
+              // bg-color
+              background-color: #010c1f;
+              // aligns text at center
+              text-align: center;
+              a{
+                // remove the styles
+                color: white;
+                text-decoration: none;
+                p{
+                  // sizes
+                  margin: 0px;
+                  padding: 15px 0px;
+                  // border
+                  border-bottom: 0.5px #ffffff24 solid;
+                }
+              }
+            }
+          }
+        }
+        // the intro
+        .intro{
+          // border to right
+          border-right: solid #010c1f 3px;
+          // padding for space
+          padding: 20px;
+          // bg-color
+            // in  case the shade does not work
+            background-color: #010c1f;
+          background-color: #010c1f80;
+          background-color: rgba(1, 12, 31, 0.5019607843137255);
+          // the position of the intro
+          top: 105px;
+          // the size
+          width: 65%;
+          margin: 0px 12%;
+          // position to absolute to allow for moving
+          position: absolute;
+          // sets color to white
+          color: white;
+          text-align: center;
+          h1{
+            // removes initial margin on top
+            margin-top: 0px;
+          }
+          p{
+            // creates more space
+            margin-bottom: 30px;
+          }
+          // to download a docx file cv
+          button{
+            padding: 5px 10px;
+            border: 2px solid white;
+            background-color: transparent;
+            border-radius: 25px;
+            color: white;
+            outline: none;
+            p{
+              margin: 0px;
+              font-size: 12px;
+            }
+            &:hover{
+              background-color: #010c1f80;
+            }
+            &:active{
+              background-color: #010c1f;
+            }
+          }
+        }
+        .header_background{
+          position: absolute;
+          top: 0px;
+          width: 102%;
+          z-index: -1;
+          figure{
+            margin-left: 0px;
+            // to allow for a full looking image
+            width: 115%;
+            // to prevent a overflowing image
+            overflow: hidden;
+            img{
+              width: 165%;
+            }
+          }
+        }
+      }
+    }
+    .content{
+      background-color: #24669d;
+      padding-top: 130px;
+      margin-top: -100px;
+      .about_me{
+        padding: 5px 10px;
+        padding-bottom: 20px;
+
+        fieldset{
+          padding: 15px;
+          transition: box-shadow 1s;
+          transition: -webkit-box-shadow 1s;
+          border: solid white 2px;
+          legend{
+            h2{
+              vertical-align: bottom;
+              margin-top: 0px;
+              @include overline;
+            }
+          }
+          figure{
+            width: 185px;
+            img{
+              @include images;
+              border-radius: 360px;
+            }
+            figcaption{
+              width: 100%;
+              text-align: center;
+            }
+          }
+          p{
+            text-align: center;
+          }
+          &:hover{
+            // for an inset bow shadow on hover
+            box-shadow:inset 0px 0px 0px 12px #24669d, inset 0px 0px 0px 14px white;
+            -webkit-box-shadow:inset 0px 0px 0px 12px #24669d, inset 0px 0px 0px 14px white;
+          }
+        }
+      }
+      .my_skills{
+        padding: 30px 0px;
+        // the is to align it contents correctly
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .heading{
+          grid-column: 1/3;
+          grid-row: 1/2;
+          // creates some space
+          padding-bottom: 10px;
+          padding-left: 20px;
+          margin: 0px 20px;
+          margin-bottom: 10px;
+          // gives a nice border effect
+          border-bottom: 1px #ffffff24 solid;
+          width: 95%;
+          h2{
+            @include overline;
+            margin: 8px 0px;
+          }
+          p{
+            width: 100%;
+            margin: 8px 0px;
+          }
+        }
+        // the coding icons
+        .coding{
+          grid-column: 1/3;
+          grid-row: 2/3;
+          margin: 20px 0px;
+          height: 80px;
+          // bg-col
+          background-color: #010c1f;
+          background-color: white;
+          // for inset box shadow
+          box-shadow:inset 0px 4px 14px 4px #969696;;
+          -webkit-box-shadow:inset 0px 4px 14px 4px #969696;;
+          .code_icons{
+            // gives a curve
+              // hardly noticable
+            border-radius: 100px;
+            margin: 0px 5%;
+            figure{
+              display: inline-block;
+              height: 50px;
+              width: 50px;
+              img{
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .projects{
+          margin: 20px 0px;
+          padding: 10px 0px;
+          grid-column: 1/3;
+          grid-row: 3/4;
+          // bg-colors
+          background-color: #010c1f;
+          a{
+            figure{
+              // sizes and spaces
+              width: 90%;
+              padding: 0px 20px;
+              margin: 10px 0px;
+              img{
+                // border radius
+                border-radius: 6px;
+                width: 100%;
+                height: 100%;
+                // an opacity
+                opacity: 0.5;
+                // a transition
+                transition: opacity 1s;
+              }
+              // on hover
+              &:hover{
+                img{
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+        // to display the bars in grids
+        .skills1{
+          grid-column: 1/3;
+          grid-row: 4/5;
+        }
+        // to display the bars in grids
+        .skills2{
+          grid-column: 1/3;
+          grid-row: 5/6;
+        }
+        // styels for each skills
+        .skills{
+          width: 90%;
+          padding: 0px 20px;
+          h3{
+            margin-right: 10%;
+            margin: 8px 0px;
+          }
+          .bar{
+            margin: 15px 0px;
+            width: 100%;
+            height:20px;
+            .bar_content{
+              width: 0%;
+              height: 100%;
+              background-color: #010c1f;
+              border-radius: 2px;
+              overflow:hidden;
+              // the percentage in the bar_content
+              span{
+                // centering the span
+                padding: 2px 0px;
+                margin: 0px 10px;
+                // for effect
+                float: right;
+              }
+            }
+          }
+        }
+      }
+      .experience{
+        background-image: url('../../images/forest.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        // for a box shadow
+        box-shadow: 0px 0px 20px 6px #012d6f;
+        -webkit-box-shadow: 0px 0px 20px 6px #012d6f;
+        // border for effect
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+        .wrapper{
+          // push content down
+          padding-top: 20px;
+          // gets fullscreen size
+          width: 100%;
+          height: 100%;
+          // gives a darkblue effect
+            // in case the colors don't work
+            background-color: #010c1f;
+          background-color: #010c1fe0;
+          background-color: rgba(1, 12, 31, 0.88);
+          // gives some padding to the left
+          padding-left: 20px;
+
+          .heading{
+            // gives a nice border effect
+            border-bottom: 1px #ffffff24 solid;
+            padding-left: 20px;
+            width: 95%;
+            // gives space
+            margin-bottom: 40px;
+            h2{
+              // for colored over-line
+              @include overline;
+            }
+          }
+          ul{
+            width: 82%;
+            .details{
+              margin-left: -14px;
+              // create space between each list item
+              padding: 10px 0px;
+              padding-left: 14px;
+
+              border-left: solid white 2px;
+              line-height: 30px;
+              span{
+                text-decoration: underline;
+              }
+            }
+            .macbat{
+              height: 70px;
+            }
+            .last{
+              color: blue;
+            }
+          }
+        }
+      }
+      .hobbies{
+        padding: 20px;
+        margin-left: 20px;
+        .heading{
+          // creates some space
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          // creates a nice border effect
+          border-bottom: 1px #ffffff24 solid;
+          width: 95%;
+          h2{
+            @include overline;
+          }
+        }
+        .my_hobbies,.interests{
+          ul{
+            padding-left: 20px;
+          }
+        }
+      }
+      .references{
+        button{
+          width: 100%;
+          color: white;
+          background-color: #0d3668;
+          border: 2px solid white;
+          outline: none;
+          span{
+            *{
+              display: inline-block;
+              vertical-align: middle;
+            }
+            #indicator{
+              width: 16px;
+              margin-left: 10px;
+              // a transition
+              transition: rotate 1s;
+            }
+          }
+          &:hover{
+            background-color: #00459b;
+          }
+          &:active{
+            background-color: #0d3668;
+          }
+        }
+        .ref_content{
+          height:0px;
+          // for inset box shadow
+          box-shadow:inset 0px 6px 15px 4px #00183c;
+          -webkit-box-shadow:inset 0px 6px 15px 4px #00183c;
+          overflow-y: hidden;
+          // for a transition effect
+          transition: height 0.5s;
+          // bg-col
+          background-color: #0d3668;
+          ul{
+            padding: 20px 0px;
+            padding-left: 50px;
+            li{
+              p{
+                span{
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    footer{
+      .contact_details{
+        background-color: #002543;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        h2{
+          margin-left: 43px;
+          margin-top: 0px;
+          @include overline;
+        }
+        p{
+          margin: 0px;
+          padding: 10px 0px;
+          .grey{
+            color:grey;
+          }
+        }
+      }
+      .absolute_footer{
+        background-color:#010c1f;
+        padding: 7px 20px;
+        p{
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+
+// responsive Design
+// medium mobile
+@media only screen and (min-device-width:370px)  {
+  body{
+    main{
+      header{
+        .header_content{
+          .intro{
+            top: 110px;
+            width: 60%;
+            margin: 0px 14%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// large mobile
+@media only screen and (min-device-width:410px)  {
+  body{
+    main{
+      header{
+        .header_content{
+          margin-top: 85px;
+          height: 360px;
+          .intro{
+            top: 130px;
+            width: 60%;
+            margin: 0px 14%;
+          }
+        }
+      }
+    }
+  }
+}
+// tablet view
+@media only screen and (min-device-width:700px) {
+  body{
+    main{
+      header{
+        // increased height
+        .header_content{
+          height: 620px;
+          nav{
+            // adjusted navbar height and position from top
+            top: 95px;
+            height: 70px;
+            .menu{
+              button{
+                margin: 6px;
+                padding: 4px;
+                figure{
+                  width: 50px;
+                }
+              }
+              #menu_content{
+                top: 70px;
+                a{
+                  p{
+                    font-size: 25px;
+                    padding: 25px 0px;
+                  }
+                }
+              }
+            }
+          }
+          .intro{
+            top:245px;
+            margin: 0px 30%;
+            width: 35%;
+            // adjusted font-size
+            button{
+              p{
+                font-size: 17px;
+              }
+            }
+            h1{
+              font-size: 33px;
+            }
+            p{
+              font-size: 24px;
+            }
+          }
+          // changed image orientation
+          .header_background{
+            width: 124%;
+            figure{
+              img{
+                width: 115%;
+              }
+            }
+          }
+        }
+      }
+      .content{
+        padding-top: 155px;
+        margin-top: -130px;
+        .about_me{
+          fieldset{
+            p{
+              font-size: 19px;
+            }
+          }
+        }
+        .my_skills{
+          .projects{
+            a{
+              figure{
+                width: 94%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width:1020px) {
+  body{
+    main{
+      header{
+        // small changes
+        .header_content{
+          height: 650px;
+          margin-top: 131px;
+          margin-left: 83px;
+          nav{
+            top: 65px;
+            .menu{
+              button{
+                display: none;
+              }
+              #menu_content{
+                display: block;
+                position: static;
+                background-color: transparent;
+                a{
+                  p{
+                    display: inline-block;
+                    font-size: 20px;
+                    padding: 23px 34px;
+                    border: none;
+                    &:hover{
+                      background-color: #24669d;
+                    }
+                    &:active{
+                      background-color: #010c1f;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .intro{
+            margin: 0px 30%;
+            padding: 70px 40px;
+            top:210px;
+            width: 35%;
+            *{
+              vertical-align: middle;
+            }
+            h1{
+              font-size: 45px;
+            }
+            p{
+
+            }
+          }
+
+          .header_background{
+            width: 107%;
+            figure{
+              img{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .content{
+        padding-top: 250px;
+        margin-top: -200px;
+        .about_me{
+          // to decreaese the fieldset width on desktop
+          padding: 5px 25px;
+          padding-bottom: 20px;
+          fieldset{
+            *{
+              vertical-align: middle;
+              display: inline-block;
+            }
+            figure{
+              margin: 10px 15%;
+            }
+            p{
+              width: 46%;
+              font-size: 18px;
+            }
+          }
+        }
+        .experience{
+          .wrapper{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            // center the content more
+            // width: 98%;
+            padding: 20px 0px;
+            padding-left: 20px;
+            .heading{
+              // gives space
+              padding-left: 20px;
+              grid-column: 1/3;
+              grid-row: 1/2;
+            }
+            .work_experience{
+              grid-column: 1/2;
+              grid-row: 2/3;
+              // keeps from sides and overflowing
+              width: 90%;
+            }
+            .education{
+              grid-column: 2/3;
+              grid-row: 2/3;
+              // keeps from sides and overflowing
+              width: 90%;
+            }
+          }
+        }
+        .my_skills{
+          .heading{
+            // gives space
+            padding-left: 34px;
+          }
+          .projects{
+
+            padding-left: .4%;
+            a{
+              figure{
+                width: 33%;
+                padding: 0px;
+                display: inline-block;
+              }
+            }
+          }
+          .skills{
+            .bar{
+              // resizing bar height
+              height: 25px;
+              .bar_content{
+                span{
+                  // centering span
+                  padding: 4px 0px;
+                }
+              }
+            }
+          }
+          // to display the bars next to each other
+          .skills1{
+            grid-column: 1/2;
+            grid-row: 4/5;
+            // so that the bar wil expand from right to left
+            text-align: right;
+            .bar{
+              .bar_content{
+                float: right;
+                span{
+                  float: left;
+                }
+              }
+            }
+          }
+          // to display the bars next to each other
+          .skills2{
+            grid-column: 2/3;
+            grid-row: 4/5;
+          }
+        }
+        .hobbies{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          .heading{
+            grid-column: 1/3;
+            grid-row: 1/2;
+          }
+          .interests{
+            grid-column: 1/2;
+            grid-row: 2/3;
+          }
+          .my_hobbies{
+            grid-column: 2/3;
+            grid-row: 2/3;
+          }
+        }
+        .references{
+          .ref_content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .Interests{
+              grid-column: 1/2;
+              grid-row: 1/2;
+            }
+            .my_hobbies{
+              grid-column: 2/3;
+              grid-row: 1/2;
+            }
+          }
+        }
+      }
+    }
+  }
+}

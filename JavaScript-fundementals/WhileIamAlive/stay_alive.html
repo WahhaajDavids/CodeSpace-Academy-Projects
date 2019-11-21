@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <img src="" alt="">
+      <p>
+        <span id="minute"></span>
+        :
+        <span id="second"></span>
+      </p>
+    </main>
+    <script type="text/javascript">
+      // the minute
+      document.getElementById('minute').innerHTML = "00";
+
+      // the second
+      let sec = 15;
+      // alert(sec);
+
+      document.getElementById('second').innerHTML = sec;
+      while(sec>=0){
+        let timer = setInterval(function(){
+          sec--;
+          if(sec<10){
+            document.getElementById('second').innerHTML = "0"+sec;
+            clearInterval(timer);
+          }
+          else {
+            document.getElementById('second').innerHTML = sec;
+            clearInterval(timer);
+          };
+        }, 1000);
+      }
+      if(sec < 0) {
+        document.write("times up");
+      }
+
+      // i need help with the while loop
+      // i can only do an interval loop
+
+
+    </script>
+  </body>
+</html>

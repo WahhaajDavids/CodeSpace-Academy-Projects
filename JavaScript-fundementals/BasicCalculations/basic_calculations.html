@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Basic Calculations</title>
+    <style media="screen">
+      /* gets rid of spinner */
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <input type="number" name="a"  id="a">
+      <input type="number" name="b"  id="b">
+      <input type="button"  value="click" onclick="btn1()">
+      <p id="add"></p>
+      <p id="subtract"></p>
+      <p id="multiply"></p>
+      <p id="divide"></p>
+    </main>
+    <script type="text/javascript">
+    'use strict'
+      // variables
+      // let a = 50;
+      // let b = 25;
+
+      // onclick function
+      function btn1(){
+
+        // variables
+        let a1 = document.getElementById('a').value;
+        let a = +a1;
+        let b1 = document.getElementById('b').value;
+        let b = +b1
+
+        // the addition equation
+        function add (a,b){
+
+          // validation
+          if (Number.isInteger(a/b) ){
+
+            // calculation
+            let ans = a + b;
+
+            // log response
+            console.log("the answer is "+ ans);
+
+            // the results shown
+            document.getElementById('add').innerHTML = "the answer is " + ans;
+
+          }
+          else{
+            // the results shown
+            document.getElementById('add').innerHTML = "Unable to Calculate" ;
+          }
+        }
+        // results
+        add(a,b);
+
+        // the subtraction equation
+        function subtract (a,b){
+
+          // validation
+          if (Number.isInteger(a/b) ){
+
+            // calculation
+            let ans = a - b;
+
+            // log response
+            console.log("the answer is "+ ans);
+
+            // the results shown
+            document.getElementById('subtract').innerHTML = "the answer is " + ans;
+
+          }
+          else{
+            // the results shown
+            document.getElementById('subtract').innerHTML = "Unable to Calculate" ;
+          }
+        }
+        // results
+        subtract(a,b);
+
+        // the multiplication equation
+        function multiply (a,b){
+
+          // validation
+          if (Number.isInteger(a/b) ){
+
+            // calculation
+            let ans = a * b;
+
+            // log response
+            console.log("the answer is "+ ans);
+
+            // the results shown
+            document.getElementById('multiply').innerHTML = "the answer is " + ans;
+
+          }
+          else{
+            // the results shown
+            document.getElementById('multiply').innerHTML = "Unable to Calculate" ;
+          }
+        }
+        // results
+        multiply(a,b);
+
+        // the division equation
+        function divide (a,b){
+
+          // validation
+          if (Number.isInteger(a/b) ){
+
+            // calculation
+            let ans = a / b;
+
+            // log response
+            console.log("the answer is "+ ans);
+
+            // the results shown
+            document.getElementById('divide').innerHTML = "the answer is " + ans;
+
+          }
+          else{
+            // the results shown
+            document.getElementById('divide').innerHTML = "Unable to Calculate" ;
+          }
+        }
+        // results
+        divide(a,b);
+
+
+      }
+
+    </script>
+  </body>
+</html>

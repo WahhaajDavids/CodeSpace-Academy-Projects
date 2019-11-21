@@ -1,0 +1,13 @@
+.edit_button{
+  border: none;
+  outline: none;
+  background-color: #195d97;
+  border-radius: 6px;
+  p{
+    color: white;
+    margin: 9px 4px;
+  }
+  &:hover{
+    background-color: #15446c;
+  }
+}

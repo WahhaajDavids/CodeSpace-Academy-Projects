@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="" value="" id="input">
+    <button type="button" name="button" id="button">click</button>
+    <div id="results">
+
+    </div>
+
+    <script type="text/javascript">
+      'use strict';
+
+      document.getElementById('button').addEventListener('click',scrambleString);
+
+      // function runs onclick
+      function scrambleString(){
+        let input = document.getElementById('input').value;
+
+        // function replaces a char at a certain index
+        function replaceChar(string,index,replace){
+          input  = string.substr(0,index) + replace + string.substr(index+replace.length);
+        }
+        // repeats thru the length of the string
+        for(let i = 0; i < input.length; i++){
+          let char = input.charAt(i),
+            random = Math.floor(Math.random()*input.length),
+            charRandom = input.charAt(random);
+
+            replaceChar(input,random,char);
+            replaceChar(input,i,charRandom);
+        };
+        // results obtained
+        document.getElementById('results').innerHTML += input + "<br>";
+      };
+    </script>
+  </body>
+</html>

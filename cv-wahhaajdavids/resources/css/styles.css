@@ -1,0 +1,336 @@
+/* the code for styling is here */
+body{
+  background-color: rgba(224, 218, 218, 0.95);
+}
+
+p{
+  font-size: 15px;
+  width: 75%;
+}
+
+header{
+  background: url(images/me2.jpg);
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  box-shadow: inset 0px -5px 20px dimgrey;
+}
+
+.about{
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+nav{
+  align-content: center;
+  display: flex;
+  background-color: black;
+  color: white;
+  box-shadow: 0px 1px 5px dimgrey,inset 0px -5px 5px rgba(255, 255, 255, 0.45);
+}
+
+button{
+  border: none;
+  background-color: #f9f9f9;
+  box-shadow: 0px 1px 5px dimgrey,inset 0px -5px 5px lightgrey;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: grey;
+}
+
+button:focus{
+  outline: none;
+}
+/* this is used at the top of the screen in the nav */
+.menu{/* i researched for how to do a dropdown menu using only css */
+  position: relative;
+  display: inline-block;
+}
+
+.menu-content{
+  display: none;
+  position: absolute;
+  bottom: -250px;
+  left: 5px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 3;
+  box-shadow: 2px 5px 10px grey;
+}
+
+.menu-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-content a:hover{
+  background-color: #ddd;
+  text-shadow: 0px 2px 2px dimgrey;
+}
+
+.menu:hover .menu-content{
+  display: block;
+}
+
+#face{
+  background-color: steelblue;
+}
+
+#face:hover{
+  background-color: #3232ff;
+}
+
+.sect{
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(80, 79, 79, 0.92);
+  border-radius: 10px;
+}
+
+.box1{
+  border-bottom: 4px dotted rgba(107, 105, 105, 0.62);
+}
+
+.sect3{
+  border: 6px solid dimgrey;
+  border-left:4px solid #313131;
+  border-right:4px solid #A5A5A5;
+  box-shadow: none;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  display: block;
+}
+b{
+  color: red;
+}
+.box3{
+  width: 20%;
+  height: 10%;
+  padding: 12% 30%;
+}
+
+h4{
+  margin: 25px 0;
+}
+
+.bar, h4,.images{
+  display: inline-block;
+}
+
+.bar-content1{
+  height: 100%;
+  width: 90%;
+}
+
+.bar-content2{
+  height: 100%;
+  width: 70%;
+}
+
+.bar-content3{
+  height: 100%;
+  width: 80%;
+}
+
+.bar-content4{
+  height: 100%;
+  width: 98%;
+}
+
+h2,h1,h3{
+  margin: 0;
+  padding: 16px 10px 0px 10px ;
+  text-decoration: underline;
+}
+
+.heading{
+  padding: 10px;
+  text-decoration: none;
+}
+
+.box-skill ul li{
+  margin: 10px 0;
+  line-height: 10px;
+}
+
+.bar{
+  margin-right: 30px;
+  float: right;
+  height: 20px;
+  width:150px;
+  border: 2px solid black;
+}
+
+.br1{
+  background-color: grey;
+}
+
+
+footer{
+  box-shadow:inset 0px 5px 5px rgba(255, 255, 255, 0.45);
+  background-color: black;
+  color: white;
+}
+
+.punctuation  {
+  line-height: 30px;
+  font-size: 40px;
+  font-style: italic;
+}
+/*the code for structure comes here */
+
+body{
+  margin: 0;
+}
+
+.container{
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template: repeat(1,1fr);
+}
+
+header{
+  margin-top: 50px;
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  height: 500px;
+  width: 100%;
+}
+
+header .about{
+  position: absolute;
+  top: 90px;
+  left: 100px;
+  width: 40%;
+  height: 300px;
+  overflow-y: auto;
+
+}
+/* the fun elephents gif */
+.gif-img{
+  width: 80%;
+    height: 50%;
+}
+
+.gif-img img{
+  height: 100%;
+  width: 100%
+}
+
+.about p{
+  padding: 10px ;
+}
+
+nav{
+  top: 0;
+  z-index: 2;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+}
+
+button{
+  height: 50px;
+  width: 50px;
+}
+
+.content{
+  padding-top: 60px;
+  z-index: 1;
+  margin: 0 7%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 8;
+}
+
+section{
+  min-height: 400px;
+  margin: 30px 0;
+}
+.sect3{
+  height: 400px;
+}
+
+.box{
+  display: block;
+  height: 500px;
+  width: 99%;
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.box3{
+  width: 60%
+}
+
+.images{
+  float: right;
+  width: 295px ;
+  height: 60px;
+}
+
+.html-css,.delphi{
+  margin: 0px 10px;
+  height: inherit;
+  display: inline-block;
+}
+
+.html-css{
+  width:200px;
+}
+
+.delphi{
+  width: 50px;
+}
+
+.code{
+  height: 100%;
+  width: 100%;
+}
+
+.example{
+  color: grey;
+}
+
+
+footer{
+  bottom: 0;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  height: 60px;
+  width: 100%;
+}
+
+footer *{
+  display: inline-block;
+}
+
+
+/* for a responsive design */
+
+@media only screen and (min-width:1000px) {
+  .box{
+    height: 400px;
+    width: 49%;
+    display: inline-block;
+  }
+
+  h4{
+    margin: 15px 0;
+  }
+
+  .box1{
+    border: none;
+      border-right: 4px dotted rgba(107, 105, 105, 0.62);
+  }
+}

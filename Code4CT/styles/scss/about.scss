@@ -1,0 +1,466 @@
+/* comments in .scss file*/
+// variables
+@mixin spanColours {
+  .span1{
+    border-bottom: 3px solid #e38f84;
+  }
+  .span2{
+    border-bottom: 2px solid #797979;
+  }
+}
+@mixin images {
+  width: 100%;
+  height: 100%;
+}
+@mixin buttonShadow {
+  box-shadow:inset 3px 5px 20px #00000052;
+  -webkit-box-shadow:inset 3px 5px 20px #00000052;
+  p{
+    text-shadow: 3px 5px 20px #000000;
+    -webkit-text-shadow: 3px 5px 20px #000000;
+  }
+}
+
+// mobile
+body{
+  main{
+    .content{
+      section{
+        // grid for structure
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0px 10%;
+        font-size: 15px;
+      }
+      // the section welcomin you to the company
+      .welcome{
+        .welcome_info{
+          // relative positioning
+          position: relative;
+          grid-column: 1/3;
+          grid-row: 1/2;
+          margin-bottom: 80px;
+          h2{
+            @include spanColours;
+          }
+          // button link
+          a{
+            button{
+              // its styles
+            position: absolute;
+            background-color: #e38f84;
+            border: none;
+            color: white;
+            margin: 10px;
+            width: 200px;
+            height: 50px;
+            // @include buttonShadow;
+            &:hover{
+              width: 220px;
+            }
+            p{
+              margin: 0;
+              font-size: 20px;
+            }
+          }
+          }
+        }
+        figure{
+          // figure grid
+          grid-column: 1/3;
+          grid-row: 2/3;
+          margin: 10px 0px;
+          width: 100%;
+          img{
+            @include images;
+          }
+        }
+      }
+      // the section decribing the company
+      .who_we_are{
+        padding-left: 0px;
+        figure{
+          // grid
+          grid-column: 1/3;
+          grid-row: 1/2;
+          margin: 10px 0px;
+          width: 100%;
+          img{
+            @include images;
+          }
+        }
+        // its content
+        .we_are_content{
+          // grid
+          grid-column: 1/3;
+          grid-row: 2/3;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding-left: 10%;
+          .top_content{
+            // grid
+            grid-column: 1/3;
+            grid-row: 1/2;
+            h2{
+              @include spanColours;
+            }
+          }
+          .content_who_we_are{
+            h3{
+              color: #e38f84;
+            }
+            padding-right: 30px;
+          }
+          // grids for the contents
+          .content1{
+            grid-column: 1/3;
+            grid-row: 2/3;
+          }
+          .content2{
+            grid-column: 1/3;
+            grid-row: 3/4;
+          }
+          .content3{
+            grid-column: 1/3;
+            grid-row: 4/5;
+          }
+          .content4{
+            grid-column: 1/3;
+            grid-row: 5/6;
+          }
+        }
+      }
+      // the staff of code for cape town
+      .meet_the_team{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .intro{
+          grid-column: 1/5;
+          grid-row: 1/2;
+          h2{
+            @include spanColours;
+          }
+        }
+        figure{
+          width: 40vw;
+          img{
+            border-radius: 6px;
+            @include images;
+          }
+        }
+        .staff{
+          .position{
+            font-size: 13px;
+            color: grey;
+            padding-bottom: 20px;
+            border-bottom: lightgrey solid 1px;
+          }
+        }
+        // grids for the staffs
+        .fig1{
+          grid-column: 1/3;
+          grid-row: 2/3;
+        }
+        .staff1{
+          grid-column: 1/3;
+          grid-row: 3/4;
+        }
+        .fig2{
+          grid-column: 1/3;
+          grid-row: 4/5;
+        }
+        .staff2{
+          grid-column: 1/3;
+          grid-row: 5/6;
+        }
+        .fig3{
+          grid-column: 1/3;
+          grid-row: 6/7;
+        }
+        .staff3{
+          grid-column: 1/3;
+          grid-row: 7/8;
+        }
+        .fig4{
+          grid-column: 1/3;
+          grid-row: 8/9;
+        }
+        .staff4{
+          grid-column: 1/3;
+          grid-row: 9/10;
+        }
+      }
+      // the spinner couters
+      .spinner_canvas{
+        padding:30px 0px;
+        background-color: black;
+        grid-template-columns: repeat(4,25%);
+
+        // each individual spinner part
+        .canvas-wrap {
+          text-align: center;
+          display: inline-block;
+          position: relative;
+          grid-column: 1/5;
+
+          // to keep the canvas in place
+          canvas{
+            width: 100%;
+          }
+          .procent {
+            margin: 0px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 38%;
+            font-size: 90px;
+            transform: translate(-50%, -50%);
+            &::after{
+              content: '%';
+            }
+          }
+          p,h3{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// responive Design
+// tablet view
+@media only screen and (min-device-width:700px) {
+  body{
+    main{
+      .content{
+        section{
+          h2{
+            font-size: 25px;
+          }
+        }
+        .welcome{
+          .welcome_info{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            padding-right: 100px;
+            a{
+              button{
+                width: 150px;
+                height: 40px;
+                p{
+                  font-size: 20px;
+                }
+                &:hover{
+                  width: 165px;
+                }
+              }
+            }
+          }
+          figure{
+            margin-top: 30%;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            img{
+              height: auto;
+            }
+          }
+        }
+        .who_we_are{
+          .we_are_content{
+            .content1{
+              grid-column: 1/2;
+              grid-row: 2/3;
+            }
+            .content2{
+              grid-column: 2/3;
+              grid-row: 2/3;
+            }
+            .content3{
+              grid-column: 1/2;
+              grid-row: 3/4;
+            }
+            .content4{
+              grid-column: 2/3;
+              grid-row: 3/4;
+            }
+          }
+        }
+        .meet_the_team{
+          figure{
+            width: 80%;
+          }
+          .fig1{
+            grid-column: 1/2;
+            grid-row: 2/3;
+          }
+          .staff1{
+            grid-column: 2/3;
+            grid-row:2/3;
+          }
+          .fig2{
+            grid-column: 1/2;
+            grid-row: 3/4;
+          }
+          .staff2{
+            grid-column: 2/3;
+            grid-row: 3/4;
+          }
+          .fig3{
+            grid-column: 1/2;
+            grid-row: 4/5;
+          }
+          .staff3{
+            grid-column: 2/3;
+            grid-row: 4/5;
+          }
+          .fig4{
+            grid-column: 1/2;
+            grid-row: 5/6;
+          }
+          .staff4{
+            grid-column: 2/3;
+            grid-row: 5/6;
+          }
+        }
+        // so that the canvases can display next to each other
+        .spinner_canvas{
+          .canvas-wrap{
+            .procent{
+              font-size: 75px;
+            }
+          }
+          #canvas-wrap1{
+            grid-column: 1/3;
+            grid-row: 1/2;
+          }
+          #canvas-wrap2{
+            grid-column: 3/5;
+            grid-row: 1/2;
+          }
+          #canvas-wrap3{
+            grid-column: 1/3;
+              grid-row: 2/3;
+          }
+          #canvas-wrap4{
+            grid-column: 3/5;
+            grid-row: 2/3
+          }
+        }
+      }
+    }
+  }
+}
+
+// laptop view
+@media only screen and (min-device-width:1020px) {
+  body{
+    main{
+      .content{
+        .welcome{
+          .welcome_info{
+            a{
+              button{
+                width: 100px;
+                height: 30px;
+                p{
+                  font-size: 15px;
+                }
+                &:hover{
+                  width:110px;
+                }
+              }
+            }
+          }
+          figure{
+            margin-top: 10px;
+            img{
+              height: 100%;
+            }
+          }
+        }
+        .who_we_are{
+          figure{
+            overflow: hidden;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            img{
+              width: 215%;
+            }
+          }
+          .we_are_content{
+            grid-column: 2/3;
+            grid-row: 1/2;
+          }
+        }
+        // just changing the layout of the grids
+        .meet_the_team{
+          grid-template-columns: repeat(4,1fr);
+          figure,.staff{
+            display: inline-block;
+          }
+          figure{
+            margin-left: 10px;
+            width: 80%;
+          }
+          .fig1{
+            grid-column: 1/2;
+            grid-row: 2/3;
+          }
+          .staff1{
+            grid-column: 2/3;
+            grid-row:2/3;
+          }
+          .fig2{
+            grid-column: 3/4;
+            grid-row: 2/3;
+          }
+          .staff2{
+            grid-column: 4/5;
+            grid-row: 2/3;
+          }
+          .fig3{
+            grid-column: 1/2;
+            grid-row: 3/4;
+          }
+          .staff3{
+            grid-column: 2/3;
+            grid-row: 3/4;
+          }
+          .fig4{
+            grid-column: 3/4;
+            grid-row: 3/4;
+          }
+          .staff4{
+            grid-column: 4/5;
+            grid-row: 3/4;
+          }
+        }
+        .spinner_canvas{
+          .canvas-wrap{
+            .procent{
+              font-size: 40px;
+              top: 34%;
+            }
+          }
+          #canvas-wrap1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+          }
+          #canvas-wrap2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+          }
+          #canvas-wrap3{
+            grid-column: 3/4;
+            grid-row: 1/2;
+          }
+          #canvas-wrap4{
+            grid-column: 4/5;
+            grid-row: 1/2;
+          }
+        }
+      }
+    }
+  }
+}

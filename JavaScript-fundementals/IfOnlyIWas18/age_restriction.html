@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Age Restrictions</title>
+    <style media="screen">
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="frm">
+        <input type="number" name="age1" placeholder="your age" id="age">
+      </div>
+      <input type="button" name="submit" value="submit" onclick="btn()">
+      <p id="message"></p>
+    </main>
+
+    <script type="text/javascript">
+
+    function btn(){
+      // get the value from the input
+      let age1 = document.getElementById('age').value;
+
+      // the if statement for different ages
+      // i was confused with the && and ||
+      if (age1>0 && age1<=6){
+        document.getElementById('message').innerHTML = "your way too young";
+      };
+
+      if (age1>6 && age1<=13){
+        document.getElementById('message').innerHTML = "your not even in High School";
+      };
+
+      if (age1>13 && age1<=16){
+        document.getElementById('message').innerHTML = "your not a senior at High School";
+      };
+
+      if (age1>16 && age1<=18){
+        document.getElementById('message').innerHTML = "your a High School Senior";
+      };
+
+      if (age1>18 && age1<=21){
+        document.getElementById('message').innerHTML = "you probabbly have a job";
+      };
+
+      if (age1>21 && age1<=23){
+        document.getElementById('message').innerHTML = "you've had your 21st already";
+      };
+
+      if (age1>23 && age1<=30){
+        document.getElementById('message').innerHTML = "your an adult";
+      };
+
+      if (age1>30){
+        document.getElementById('message').innerHTML = "your way too old";
+      };
+    }
+
+    </script>
+  </body>
+</html>

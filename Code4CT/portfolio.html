@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="view-port" content="width=device-width, initial-scale=1">
+    <title>Portfolio | CODE4CT</title>
+    <!-- the style tag for nav and footer -->
+    <link rel="stylesheet" href="styles/css/nav_footer_style.css">
+    <!-- stylesheet for header -->
+    <link rel="stylesheet" href="styles/css/header_style.css">
+    <!-- the pages styles -->
+    <link rel="stylesheet" href="styles/css/portfolio.css">
+    <!-- icon -->
+    <link rel="icon" href="images\icons\Favicon_Code4CT-150x150.png">
+  </head>
+  <body>
+    <main>
+      <!-- the nav  -->
+      <!-- its the same for every page -->
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="images\icons\logo.png" alt="" class="logo">
+        </a>
+        <!-- the dropdown menu -->
+        <div class="menu">
+          <button type="button" name="button">
+            <figure>
+              <img src="images\icons\burger.png" alt="menu">
+            </figure>
+          </button>
+          <div class="menu_content" >
+            <a href="index.html" >HOME</a>
+            <a href="portfolio.html" style="color:#e38f84">PORTFOLIO</a>
+            <a href="courses.html">COURSES</a>
+            <a href="about.html">ABOUT</a>
+            <!-- <a href="services.html">services</a> -->
+            <a href="contact.html" class="menu_content_last">CONTACT</a>
+          </div>
+        </div>
+        <div class="search">
+          <input id="search_box" type="search" name="search" placeholder="search" >
+          <button type="button" name="button" onclick="search_button()">
+            <figure>
+              <img src="images\icons\search2.png" alt="search">
+            </figure>
+          </button>
+        </div>
+      </nav>
+      <!-- the main content of the page -->
+      <div class="content">
+        <!-- the header -->
+        <!-- its the same for a few pages -->
+        <header>
+          <div class="wrapper_head">
+            <h1>Our Portfolio</h1>
+            <p>
+              <a href="index.html" style="color:#e38f84">Home</a> &rarr;
+              <a href="portfolio.html">Portfolio</a>
+            </p>
+          </div>
+        </header>
+        <!-- the intro to the portfolio page -->
+        <section class="intro">
+          <div class="intro_wrapper">
+            <article class="intro_content">
+              <h2><span class="span2">Our Aw</span><span class="span1">some</span><span class="span2">Portfolio</span></h2>
+              <p>Over the past 3 years, Code for Cape Town has reached over 600 young women with coding and social innovation. Not only have they been exposed to coding but they have also done careers and life skills courses, design thinking workshops and social innovation projects to address local challenges.</p>
+            </article>
+          </div>
+        </section>
+        <!-- the portfolio -->
+        <section class="portfolio">
+          <!-- a wrapper -->
+          <div class="gallery_wrapper">
+            <div class="gallery" id="gallery1">
+              <figure onclick="prettyPicture(1,1)">
+                <img src="images\portfolio\portfolio1.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,2)">
+                <img src="images\portfolio\portfolio2.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,3)">
+                <img src="images\portfolio\portfolio3.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,4)">
+                <img src="images\portfolio\portfolio4.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,5)">
+                <img src="images\portfolio\portfolio5.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,6)">
+                <img src="images\portfolio\portfolio6.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,7)">
+                <img src="images\portfolio\portfolio7.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,8)">
+                <img src="images\portfolio\portfolio8.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,9)">
+                <img src="images\portfolio\portfolio9.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,10)">
+                <img src="images\portfolio\portfolio10.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,11)">
+                <img src="images\portfolio\portfolio11.jpg" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(1,12)">
+                <img src="images\portfolio\portfolio12.jpg" alt="gallery1">
+              </figure>
+            </div>
+            <div class="gallery" id="gallery2">
+              <figure onclick="prettyPicture(2,1)">
+                <img src="images\main\Cosmopolitan-Logo-Code4CT1.jpg" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,2)">
+                <img src="images\main\Emma-Dicks-Code4CT-Queens-Young-Leaders-Award-400x250.jpg" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,3)">
+                <img src="images\main\Fast-Company-Magazine-Code4CT-400x250.png" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,4)">
+                <img src="images\main\Hectic-Nine-9-Logo-Code4CT-400x250.png" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,5)">
+                <img src="images\main\Mail-And-Guardian-Logo-Code4CT.jpeg" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,6)">
+                <img src="images\main\SABC-News-Logo.jpg" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,7)">
+                <img src="images\main\Ventureburn-Logo-Code4CT.png" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,8)">
+                <img src="images\wTc.JPG" alt="gallery1">
+              </figure>
+              <!-- <figure onclick="prettyPicture(2,9)">
+                <img src="images\portfolio\portfolio9.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,10)">
+                <img src="images\portfolio\portfolio10.JPG" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,11)">
+                <img src="images\portfolio\portfolio11.jpg" alt="gallery1">
+              </figure>
+              <figure onclick="prettyPicture(2,12)">
+                <img src="images\portfolio\portfolio12.jpg" alt="gallery1">
+              </figure> -->
+            </div>
+          </div>
+          <!-- the background of the pretty picture popup -->
+          <div id="prettyPicture_wrapper" onclick="prettyPicture_click()">
+          </div>
+          <!-- the pretty picture -->
+          <div class="prettyPicture" id="prettyPicture1">
+            <!-- the gallery -->
+            <div class="gallery">
+              <div class="gallery_slider" id="gallery_slider1">
+                <figure id="gal1_1">
+                  <img src="images\portfolio\portfolio1.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_2">
+                  <img src="images\portfolio\portfolio2.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_3">
+                  <img src="images\portfolio\portfolio3.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_4">
+                  <img src="images\portfolio\portfolio4.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_5">
+                  <img src="images\portfolio\portfolio5.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_6">
+                  <img src="images\portfolio\portfolio6.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_7">
+                  <img src="images\portfolio\portfolio7.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_8">
+                  <img src="images\portfolio\portfolio8.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_9">
+                  <img src="images\portfolio\portfolio9.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_10">
+                  <img src="images\portfolio\portfolio10.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal1_11">
+                  <img src="images\portfolio\portfolio11.jpg" alt="gallery1">
+                </figure>
+                <figure id="gal1_12">
+                  <img src="images\portfolio\portfolio12.jpg" alt="gallery1">
+                </figure>
+              </div>
+              <div class="right" id="right1" onclick="rightClick(1)">
+
+              </div>
+              <div class="left" id="left1" onclick="leftClick(1)">
+
+              </div>
+            </div>
+          </div>
+          <!-- the pretty picture -->
+          <div class="prettyPicture" id="prettyPicture2">
+            <!-- the gallery -->
+            <div class="gallery">
+              <div class="gallery_slider" id="gallery_slider2">
+                <figure id="gal2_1">
+                  <img src="images\main\Cosmopolitan-Logo-Code4CT1.jpg" alt="gallery1">
+                </figure>
+                <figure id="gal2_2">
+                  <img src="images\main\Emma-Dicks-Code4CT-Queens-Young-Leaders-Award-400x250.jpg" alt="gallery1">
+                </figure>
+                <figure id="gal2_3">
+                  <img src="images\main\Fast-Company-Magazine-Code4CT-400x250.png" alt="gallery1">
+                </figure>
+                <figure id="gal2_4">
+                  <img src="images\main\Hectic-Nine-9-Logo-Code4CT-400x250.png" alt="gallery1">
+                </figure>
+                <figure id="gal2_5">
+                  <img src="images\main\Mail-And-Guardian-Logo-Code4CT.jpeg" alt="gallery1">
+                </figure>
+                <figure id="gal2_6">
+                  <img src="images\main\SABC-News-Logo.jpg" alt="gallery1">
+                </figure>
+                <figure id="gal2_7">
+                  <img src="images\main\Ventureburn-Logo-Code4CT.png" alt="gallery1">
+                </figure>
+                <figure id="gal2_8">
+                  <img src="images\wTc.JPG" alt="gallery1">
+                </figure>
+                <!-- <figure id="gal2_9">
+                  <img src="images\portfolio\portfolio9.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal2_10">
+                  <img src="images\portfolio\portfolio10.JPG" alt="gallery1">
+                </figure>
+                <figure id="gal2_11">
+                  <img src="images\portfolio\portfolio11.jpg" alt="gallery1">
+                </figure>
+                <figure id="gal2_12">
+                  <img src="images\portfolio\portfolio12.jpg" alt="gallery1">
+                </figure> -->
+              </div>
+              <div class="right" id="right2" onclick="rightClick(2)">
+
+              </div>
+              <div class="left" id="left2" onclick="leftClick(2)">
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="gallery_selector">
+          <button type="button" name="button" id="gal_select1" onclick="gallerySelect(1)">
+            <p>1</p>
+          </button>
+          <button type="button" name="button" id="gal_select2" onclick="gallerySelect(2)">
+            <p>2</p>
+          </button>
+        </div>
+      </div>
+      <!-- the footer -->
+      <!-- its the same for every page -->
+      <footer>
+        <!-- wrapper for the companies -->
+        <div class="wrapper_comp">
+          <!-- the carousel -->
+          <marquee class="companies">
+            <!-- the images in the carousel -->
+            <figure>
+              <img src="images\companys\deloitte-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\lwandlelogo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\mazars-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\Mobenzi_Logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\openboxlogo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\Takealot-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\TNS-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\deloitte-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\lwandlelogo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\mazars-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\Mobenzi_Logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\openboxlogo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\Takealot-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\TNS-logo..jpg" alt="assotiated company">
+            </figure>
+          </marquee>
+        </div>
+        <section class="footer1">
+          <article class="contact_info">
+            <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\tel.png" alt="">
+              <p>+(021)-685-0991</p>
+            </div>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\email.png" alt="">
+              <p>Code4CT@gmail.com</p>
+            </div>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\address.png" alt="">
+              <p>Innovate South Africa, 403 Old Castle Brewery, 6 Beach Rd, Woodstock, Cape Town, 7915</p>
+            </div>
+          </article>
+          <article class=" list list1">
+            <ul>
+              <h3>Code4CT</h3>
+              <li><a href="about.html" style="color:#e38f84">About us</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Affliated programmes</a></li>
+            </ul>
+          </article>
+          <article class="list list2">
+            <ul>
+              <h3>Help & Support</h3>
+              <li><a href="#">Help centre</a></li>
+              <li><a href="#">Free simple template</a></li>
+              <li><a href="#">Refund policy</a></li>
+              <li><a href="#">Report spam</a></li>
+            </ul>
+          </article>
+
+        </section>
+        <section class="footer2">
+          <p>copyright &copy; 2018 PRIVACY POLICY</p>
+          <p>Follow us:
+            <a href="https://www.facebook.com/code4ct/" target="_blank">
+              <img src="images\icons\Social media\facebook_logo.png" alt="">
+            </a>
+            <a href="https://twitter.com/@code4ct" target="_blank">
+              <img src="images\icons\Social media\icon-twitter.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/code4ct/" target="_blank">
+              <img src="images\icons\Social media\instagram-icon-good.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="images\icons\Social media\google+.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/company/code-for-cape-town/" target="_blank">
+              <img src="images\icons\Social media\linkedin-icon-logo-black-and-white.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="images\icons\Social media\Skype_icon.svg" alt="">
+            </a>
+          </p>
+        </section>
+      </footer>
+      <!-- the fixed scroll to top button -->
+      <div id="scroll_top" onclick="topScreen()">
+        <figure>
+          <img src="images\icons\up_arrow.png" alt="up To Top">
+        </figure>
+      </div>
+    </main>
+    <script src="scripts/portfolio_script.js" type="text/javascript"></script>
+    <!-- the script tag for nav and footer -->
+    <script src="scripts/nav_footer_script.js" type="text/javascript"></script>
+  </body>
+</html>

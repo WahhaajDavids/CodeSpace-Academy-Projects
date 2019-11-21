@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div{
+        width: 100%;
+        height: 200px;
+        background-color:
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="red">
+        red
+      </div>
+      <div id="orange">
+        orange
+      </div>
+      <div id="yellow">
+        yellow
+      </div>
+      <div id="green">
+        green
+      </div>
+      <div id="blue">
+        blue
+      </div>
+      <div id="indigo">
+        indigo
+      </div>
+      <div id="violet">
+        violet
+      </div>
+      <input type="button" name="" value="click" id="west">
+
+    </div>
+    <script type="text/javascript">
+      // array showing colors
+      let rainBow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+      // the onclick events
+      document.getElementById('violet').onclick = function(){
+        document.getElementById('violet').style.backgroundColor = rainBow[6];
+      };
+
+      document.getElementById('indigo').onclick = function(){
+        document.getElementById('indigo').style.backgroundColor = rainBow[5];
+      };
+
+      document.getElementById('blue').onclick = function(){
+        document.getElementById('blue').style.backgroundColor = rainBow[4];
+      };
+
+      document.getElementById('green').onclick = function(){
+        document.getElementById('green').style.backgroundColor = rainBow[3];
+      };
+
+      document.getElementById('yellow').onclick = function() {
+        // document.getElementById('yellow').innerHTML = 'im no 3';
+        document.getElementById('yellow').style.backgroundColor = rainBow[2];
+      };
+
+      document.getElementById('red').onclick = function(){
+        // document.getElementById('red').innerHTML = 'im no 1';
+        document.getElementById('red').style.backgroundColor = rainBow[0];
+      };
+
+      document.getElementById('orange').onclick = function(){
+        // document.getElementById('orange').innerHTML = 'im no 2';
+        document.getElementById('orange').style.backgroundColor = rainBow[1];
+      };
+      
+    </script>
+  </body>
+</html>

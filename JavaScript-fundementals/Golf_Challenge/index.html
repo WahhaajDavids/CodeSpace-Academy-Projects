@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>golfchallenge</title>
+  </head>
+  <body>
+    <input type="number" placeholder="stroke" id="stroke">
+    <input type="number" placeholder="par" id="par">
+    <button type="button" id="button">result</button>
+    <div id="results"></div>
+
+    <script type="text/javascript">
+     // for an onclick function
+      document.getElementById('button').addEventListener("click",golfClick);
+      let total = [],
+        x;
+      function golfClick(){
+        // the values of the input
+        let stroke = document.getElementById('stroke').value;
+        let par = document.getElementById('par').value;
+        // a function to work out the results
+        function golfScore(par, strokes) {
+          let sentence;
+          x= stroke -par;
+          console.log(x);
+
+          // get the sentence
+          if(par == 0 && stroke == 0){
+            sentence ="Invalid";
+          }else if(par == 0 && stroke == 1){
+            sentence ="par:"+par+" stroke:"+stroke+"     'Hole-In-One!'";
+          }else if(x <= -2){
+            sentence ="par:"+par+" stroke:"+stroke+"     'Eagle'";
+          }else if(x == -1){
+            sentence ="par:"+par+" stroke:"+stroke+"     'Birdie'";
+          }else if(x == 0){
+            sentence ="par:"+par+" stroke:"+stroke+"     'Par'";
+          }else if(x == 1){
+            sentence ="par:"+par+" stroke:"+stroke+"     'Bogey'";
+          }else if(x == 2){
+            sentence ="par:"+par+" stroke:"+stroke+"     'Double Bogey'";
+          }else if(x >= 3){
+            sentence ="par:"+par+" stroke:"+stroke+"     'Go Home!'";
+          }
+
+          // create a new object with the variables
+          total.push({"order": x ,"sentence":sentence});
+          // console.log(total);
+
+          // sort the object
+          total.sort(function(a,b){
+            return ((a.order < b.order) ? -1 : ((a.order == b.order) ? 0 : 1));
+          });
+          // console.log(total);
+
+          // get the results
+          document.getElementById('results').innerHTML = "";
+          for(let i in total){
+            document.getElementById('results').innerHTML += "<br>" + total[i].order+","+total[i].sentence;
+          }
+        }
+        golfScore(par, stroke);
+      }
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+body {
+  margin: 0px; }
+  body * {
+    font-family: 'Slabo 27px', serif;
+    font-family: 'Quicksand', sans-serif; }
+  body main nav {
+    z-index: 2; }
+    body main nav * {
+      display: inline-block;
+      color: white; }
+  body main .sticky_nav {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 60px;
+    background-color: #195d97; }
+    body main .sticky_nav h3 {
+      font-size: 30px;
+      margin: 15px 20px; }
+    body main .sticky_nav .menu {
+      margin: 0px 20px; }
+      body main .sticky_nav .menu .menu_content span a {
+        text-decoration: none; }
+        body main .sticky_nav .menu .menu_content span a P {
+          padding: 0px 10px; }
+          body main .sticky_nav .menu .menu_content span a P:hover {
+            color: red; }
+  body main .static_nav {
+    margin-top: 60px;
+    height: 50px;
+    background-color: #141B41;
+    margin-bottom: 20px; }
+    body main .static_nav .signedIn {
+      padding: 0px 20px; }
+      body main .static_nav .signedIn p {
+        font-size: 17px; }
+    body main .static_nav .signIn_signUp {
+      float: right;
+      padding: 0px 30px; }
+      body main .static_nav .signIn_signUp .or {
+        margin: 0px; }
+      body main .static_nav .signIn_signUp a button {
+        border: none;
+        outline: none;
+        background-color: #195d97;
+        border-radius: 6px; }
+        body main .static_nav .signIn_signUp a button p {
+          margin: 9px 4px; }
+        body main .static_nav .signIn_signUp a button:hover {
+          background-color: #15446c; }
+  body main footer {
+    margin-top: 20px; }
+    body main footer * {
+      color: white;
+      text-decoration: none; }
+    body main footer section {
+      background-color: #141B41;
+      padding: 10px 20px; }
+      body main footer section .contact_site, body main footer section .links {
+        text-align: center;
+        margin: 0px 115px;
+        vertical-align: top;
+        display: inline-block;
+        font-size: 18px; }
+      body main footer section .links p:hover {
+        color: red; }
+    body main footer .absolute_footer {
+      background-color: #0a0f27; }
+      body main footer .absolute_footer p {
+        margin: 0px;
+        padding: 10px 70px; }
+
+/*# sourceMappingURL=nav_footer.css.map */

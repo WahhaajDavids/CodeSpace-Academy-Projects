@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analog Clock</title>
+</head>
+<body>
+
+
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+
+  <style>
+    html {
+      background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+      background-size:cover;
+      font-family:'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display:flex;
+      flex:1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border:20px solid white;
+      border-radius:50%;
+      margin:50px auto;
+      position: relative;
+      padding:2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width:50%;
+      height:6px;
+      background:black;
+      position: absolute;
+      top:50%;
+    }
+    .hour-hand {
+      background: #000;
+      height: 20%;
+      left: 48.75%;
+      position: absolute;
+      top: 33%;
+      transform-origin: 50% 100%;
+      width: 2.5%;
+    }
+
+    .second-hand {
+      background: #000;
+      height: 45%;
+      left: 49.5%;
+      position: absolute;
+      top: 16%;
+      transform-origin: 50% 80%;
+      width: 1%;
+      z-index: 8;
+    }
+    .min-hand {
+      background: #000;
+      height: 40%;
+      left: 49%;
+      position: absolute;
+      top: 12%;
+      transform-origin: 50% 100%;
+      width: 2%;
+    }
+
+  </style>
+
+  <script>
+  /*
+   * Starts any clocks using the user's local time
+   * From: cssanimation.rocks/clocks
+   *  Edited by: Me
+   */
+  let clock =  setInterval(
+    function() {
+      // Get the local time using JS
+      var date = new Date;
+      var seconds = date.getSeconds();
+      var minutes = date.getMinutes();
+      var hours = date.getHours();
+      // Create an object with each hand and it's angle in degrees
+      var hands = [
+        {
+          hand: 'hour-hand',
+          angle: (hours * 30) + (minutes / 2)
+        },
+        {
+          hand: 'min-hand',
+          angle: (minutes * 6)
+        },
+        {
+          hand: 'second-hand',
+          angle: (seconds * 6)
+        }
+      ];
+      // Loop through each of these hands to set their angle
+      for (var j = 0; j < hands.length; j++) {
+        var elements = document.querySelectorAll('.' + hands[j].hand);
+        for (var k = 0; k < elements.length; k++) {
+          elements[k].style.webkitTransform = 'rotateZ('+ hands[j].angle +'deg)';
+          elements[k].style.transform = 'rotateZ('+ hands[j].angle +'deg)';
+          // If this is a minute hand, note the seconds position (to calculate minute position later)
+          if (hands[j].hand === 'min-hand') {
+            elements[k].parentNode.setAttribute('data-second-angle', hands[j + 1].angle);
+          }
+        }
+      }
+    }
+
+  ,1000);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+body {
+  background-image: url("../../images/old-1130743_960_720.jpg");
+  background-size: cover;
+  margin: 0px; }
+  body * {
+    font-family: 'Slabo 27px', serif;
+    font-family: 'Quicksand', sans-serif; }
+  body main {
+    padding: 10vh 35%; }
+    body main form {
+      background-color: white;
+      padding: 30px 0px;
+      padding-left: 20%;
+      border-radius: 6px;
+      box-shadow: 0px 1px 20px 8px #705947;
+      -webkit-box-shadow: 0px 1px 20px 8px #705947; }
+      body main form .results_statement {
+        color: red; }
+      body main form h3, body main form p {
+        margin: 10px 0px; }
+      body main form button {
+        margin-right: 50%;
+        border: none;
+        outline: none;
+        background-color: #195d97;
+        border-radius: 6px; }
+        body main form button p {
+          color: white;
+          margin: 9px 4px; }
+        body main form button:hover {
+          background-color: #15446c; }
+      body main form input {
+        margin-bottom: 15px; }
+
+/*# sourceMappingURL=sign_register.css.map */

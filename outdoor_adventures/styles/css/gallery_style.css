@@ -1,0 +1,110 @@
+/*comments on .scss file*/
+@keyframes navSlide {
+  from {
+    left: -80vw; }
+  to {
+    left: 0px; } }
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: lightgrey;
+  margin: 0px; }
+
+main {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  grid-gap: 5px; }
+  main nav {
+    background-color: dimgrey;
+    height: 100vh;
+    position: fixed;
+    grid-column: 1/2; }
+    main nav .content_wrapper {
+      position: relative;
+      width: 100px;
+      height: 100px; }
+      main nav .content_wrapper button {
+        border-radius: 25px;
+        margin: 10px;
+        background-color: lightgrey;
+        width: 80%;
+        height: 80%;
+        padding: 10px; }
+        main nav .content_wrapper button img {
+          width: 100%;
+          height: 100%; }
+      main nav .content_wrapper .nav_content {
+        top: 0px;
+        left: -80vw;
+        position: absolute;
+        width: 30vw;
+        background-color: dimgrey;
+        height: 100vh; }
+        main nav .content_wrapper .nav_content .logo {
+          margin: 10px 30px;
+          width: 60%; }
+          main nav .content_wrapper .nav_content .logo img {
+            background-color: #ffffff6e;
+            width: 100%;
+            height: 100%; }
+        main nav .content_wrapper .nav_content .menu {
+          margin: 40px 0; }
+          main nav .content_wrapper .nav_content .menu #gal {
+            box-shadow: 0px 5px 5px #4c4c4c;
+            border-left: 5px solid white;
+            text-decoration: none; }
+        main nav .content_wrapper .nav_content a, main nav .content_wrapper .nav_content span {
+          color: white;
+          font-size: 3vw;
+          text-decoration: none;
+          width: 100%;
+          padding: 15px 2px;
+          display: block; }
+        main nav .content_wrapper .nav_content a:hover {
+          box-shadow: 0px 5px 5px #4c4c4c;
+          border-left: 5px solid white;
+          background-color: grey;
+          text-shadow: 0px 2px 2px dimgrey; }
+        main nav .content_wrapper .nav_content span {
+          text-decoration: underline; }
+  main .gallery {
+    grid-column: 2/3; }
+    main .gallery section h2 {
+      font-size: 3vw; }
+    main .gallery section .images figure {
+      margin: 20px;
+      width: 40%;
+      display: inline-block;
+      vertical-align: top; }
+      main .gallery section .images figure img {
+        border-radius: 6px;
+        width: 100%;
+        height: 100%; }
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 999px) {
+  main nav .content_wrapper:hover .nav_content {
+    animation: navSlide 0.5s;
+    left: 0px; } }
+@media only screen and (min-device-width: 1000px) {
+  main {
+    grid-template-columns: 20% 1fr; }
+    main nav {
+      width: 20%; }
+      main nav .content_wrapper {
+        width: 100%; }
+        main nav .content_wrapper button {
+          display: none; }
+        main nav .content_wrapper .nav_content {
+          width: 100%;
+          left: 0px; }
+          main nav .content_wrapper .nav_content a, main nav .content_wrapper .nav_content span {
+            font-size: 23px;
+            padding: 10px 2px; }
+    main .gallery section h2 {
+      font-size: 35px; }
+    main .gallery section .images figure {
+      margin: 10px;
+      width: 30%; } }
+
+/*# sourceMappingURL=gallery_style.css.map */

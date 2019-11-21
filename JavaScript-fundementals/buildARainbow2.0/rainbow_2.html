@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div{
+        width: 100%;
+        height: 200px;
+        background-color:
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="c0">
+        red
+      </div>
+      <div id="c1">
+        orange
+      </div>
+      <div id="c2">
+        yellow
+      </div>
+      <div id="c3">
+        green
+      </div>
+      <div id="c4">
+        blue
+      </div>
+      <div id="c5">
+        indigo
+      </div>
+      <div id="c6">
+        violet
+      </div>
+
+    </div>
+    <script type="text/javascript">
+      let rainBow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+      let i;
+      for (i=0;i<rainBow.length;i++){
+        let color = "c"+i;
+        document.getElementById(color).style.backgroundColor = rainBow[i]
+      }
+
+    </script>
+  </body>
+</html>

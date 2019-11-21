@@ -1,0 +1,135 @@
+// font
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body{
+  // remove margin
+  margin: 0px;
+  *{
+    font-family: 'Slabo 27px', serif;
+    font-family: 'Quicksand', sans-serif;
+  }
+  main{
+    // for both nav bars
+    nav{
+      z-index: 2;
+      *{
+        // everything inline
+        display: inline-block;
+        // // aligns at middle
+        // vertical-align: middle;
+        // text color white
+        color: white;
+      }
+    }
+    // for the sticky nav
+    .sticky_nav{
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      height: 60px;
+      // set bg-color
+      background-color: #195d97;
+      h3{
+        // h3 styles
+        font-size: 30px;
+        margin: 15px 20px;
+      }
+      .menu{
+        margin: 0px 20px;
+        .menu_content{
+          span{
+            a{
+            // remove underline
+            text-decoration: none;
+            // color red on hover
+            P{
+              // spreads the links
+              padding: 0px 10px;
+              &:hover{
+                color:red;
+              }
+            }
+          }
+          }
+        }
+      }
+    }
+    // for the static nav bar
+    .static_nav{
+      margin-top: 60px;
+      height: 50px;
+      background-color: #141B41;
+      margin-bottom: 20px;
+      .signedIn{
+        padding: 0px 20px;
+        p{
+          font-size: 17px;
+        }
+      }
+      // the sign up and sign in buttons
+      .signIn_signUp{
+        float: right;
+        padding: 0px 30px;
+        // padding-top: 7px;
+        .or{
+          margin: 0px;
+        }
+        a{
+          // for the buttons
+          button{
+            border: none;
+            outline: none;
+            background-color: #195d97;
+            border-radius: 6px;
+            p{
+              margin: 9px 4px;
+            }
+            // on hover
+            &:hover{
+              background-color: #15446c;
+            }
+          }
+        }
+      }
+    }
+    // for the footer
+    footer{
+      margin-top: 20px;
+      // for everything in the footer
+      *{
+        color: white;
+        text-decoration: none;
+      }
+      section{
+        background-color: #141B41;
+        padding: 10px 20px;
+
+        // the links and contact info
+        .contact_site,.links{
+          text-align: center;
+          margin: 0px 115px;
+          vertical-align: top;
+          display: inline-block;
+          font-size: 18px;
+        }
+
+        .links{
+          p{
+            &:hover{
+              color:red;
+            }
+          }
+        }
+      }
+      .absolute_footer{
+        background-color: #0a0f27;
+        p{
+          margin: 0px;
+          padding: 10px 70px;
+        }
+      }
+    }
+  }
+}

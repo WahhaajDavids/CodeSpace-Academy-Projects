@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="number" name="" value="" id="input">
+    <button type="button" id="button" name="button">click</button>
+    <div id="results">
+
+    </div>
+
+    <script type="text/javascript">
+      'use strict';
+
+      let danceMoves = ['wrap','spring','fist','jump','grey','wink','electro','qwerty','twerk','drop it'];
+
+      document.getElementById('button').addEventListener('click',function(){
+
+        let dance="",
+          input = document.getElementById('input').value;
+
+        for(let i = 0;i<input.length;i++){
+          dance += danceMoves[input.charAt(i)] + "<br>";
+          console.log(dance);
+        }
+        document.getElementById('results').innerHTML = dance;
+      })
+    </script>
+
+  </body>
+</html>

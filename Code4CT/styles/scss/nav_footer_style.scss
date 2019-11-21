@@ -1,0 +1,588 @@
+/* comments in .scss file*/
+// variables
+@mixin images {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin buttonShadow {
+  box-shadow:inset 3px 5px 20px #00000052;
+  -webkit-box-shadow:inset 3px 5px 20px #00000052;
+  p{
+    text-shadow: 3px 5px 20px #000000;
+    -webkit-text-shadow: 3px 5px 20px #000000;
+  }
+}
+
+// inported google fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+// animations
+// the button rotataes
+@keyframes rotateButton {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(180deg);}
+}
+// the menu fades in
+@keyframes fadeMenu {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+// to allow for smooth scrolling
+html{
+  scroll-behavior: smooth;
+}
+// mobile view
+body{
+  // for everything
+  *{
+    // for smooth transition
+    transition: width .3s;
+    // the fonts
+    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  // for all button in the website
+  button{
+    // remove outline
+    outline: none;
+    border-radius:6px;
+    -webkit-border-radius:6px;
+  }
+  margin: 0;
+  // the main
+  main{
+    // the styles for nav
+    nav{
+      z-index: 2;
+      background-color: white;
+      position: fixed;
+      right: 0px;
+      left: 0px;
+      top: 0px;
+      border-bottom: 1px solid lightgrey;
+      // display evaerthing inline
+      *{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      // logo image
+      .logo{
+        width: 250px;
+        img{
+          @include images;
+        }
+      }
+        // dropdown menu
+      .menu{
+        height: 100%;
+        position: relative;
+        margin-left: 19%;
+        // the button
+        button{
+          // button styles
+          height: 106px;
+          width: 106px;
+          padding: 10px;
+          background-color: white;
+          border: none;
+          outline: none;
+          // to hide imperfections
+          overflow: hidden;
+          figure{
+            margin: 0px;
+            width: 70%;
+            img{
+              opacity: 0.6;
+              @include images;
+            }
+          }
+          &:hover{
+            // hover animation
+            figure{
+              animation: rotateButton 0.7s ;
+            }
+          }
+        }
+        // its content
+        &:hover .menu_content{
+          display: block;
+          animation: fadeMenu 0.7s;
+        }
+        .menu_content{
+          // style the content
+          background-color: white;
+          text-align: center;
+          display: none;
+          position: absolute;
+          left: -45.5vw;
+          bottom: -380px;
+          width: 101vw;
+          a{
+            border-bottom: 1px solid lightgrey;
+            font-size: 30px;
+            text-decoration: none;
+            color: grey;
+            padding:20px  0px;
+            width: 100%;
+            &:hover{
+              color:#e38f84;
+            }
+          }
+          .menu_content_last{
+            border-bottom: 4px solid lightgrey;
+          }
+        }
+      }
+      // the search bar & button
+      .search{
+        position: absolute;
+        top: 35%;
+        right: 30px;
+        // the bar
+        input[type=search]{
+          width: 220px;
+          height: 25px;
+          display: none;
+          // a placeholder
+          &::placeholder{
+            font-size: 20px;
+          }
+        }
+        // the button
+        button{
+          background-color: white;
+          border: 1px solid lightgrey;
+          height: 40px;
+          width: 40px;
+          figure{
+            width: 100%;
+            margin: 0px;
+            img{
+              @include images;
+            }
+          }
+        }
+      }
+    }
+    // the space for the sticky nav
+    .content{
+      padding-top: 107px;
+    }
+    // the styles for footer
+    footer{
+      // the form to subscribe
+      form{
+        text-align: center;
+        // the wrapper
+        .wrapper_form{
+          position: relative;
+          margin: 35px ;
+          .h2_wrapper{
+            *{
+              display: inline-block;
+            }
+            img{
+              width: 40px;
+            }
+
+            h2{
+              margin: 10px 0;
+              font-size: 40px;
+            }
+          }
+          p{
+            margin: 10px 0px;
+            font-size: 12px;
+          }
+          // email style
+          input[type=email]{
+            margin: 10px;
+            width: 400px;
+            height: 30px;
+            font-size: 25px;
+            border-radius: 6px;
+            &::placeholder{
+              font-size: 25px;
+            }
+          }
+          button[type=submit]{
+            position: absolute;
+            background-color: #e38f84;
+            border: none;
+            color: white;
+            margin: 10px;
+            width: 200px;
+            height: 50px;
+            // @include buttonShadow;
+            &:hover{
+              width: 220px;
+            }
+            p{
+              margin: 0;
+              font-size: 30px;
+            }
+          }
+        }
+
+      }
+      // the wrapper for the companies
+      .wrapper_comp{
+        padding: 0px 3%;
+        background-color: black;
+        // the carousel
+        .companies{
+          padding: 50px 0px;
+          Figure{
+            width: 150px;
+            display: inline-block;
+            margin: 0px 40px;
+            img{
+              @include images;
+            }
+          }
+      }
+      }
+      // more footer
+      .footer1{
+        display: none;
+        padding: 10px 0px;
+        article{
+          vertical-align: top;
+          display: inline-block;
+        }
+        .contact_info{
+          width: 33%;
+          padding: 0px 10px;
+          // for details
+          .p_wrapper{
+            padding: 2px 0px;
+            *{
+              display: inline-block;
+            }
+            img{
+              border: 1px solid #797979;
+              width: 27px;
+            }
+            p{
+              width: 70%;
+              margin: 0px 10px;
+              font-size: 27px;
+            }
+          }
+        }
+        // the lists of information
+        .list{
+          ul{
+            h3{
+              font-size: 27px;
+              margin: 10px 0px;
+            }
+            li{
+              a{
+                font-size: 27px;
+                color: black;
+                text-decoration: none;
+                &:hover{
+                  color: #e38f84;
+                }
+              }
+            }
+          }
+        }
+      }
+      // the final footer
+      .footer2{
+        background-color: #e38f84;
+        color: white;
+        *{
+          vertical-align: middle;
+        }
+        p{
+          // the absolue footer styles
+          padding: 10px 0px;
+          display: inline-block;
+          font-size: 20px;
+          width: 240px;
+          padding-left: 20%;
+          margin: 0px;
+          // for the social media links
+          a{
+            text-decoration: none;
+            img{
+            width: 20px;
+            }
+          }
+        }
+      }
+    }
+    #scroll_top{
+      z-index: 6;
+      position: fixed;
+      bottom: 5vh;
+      transition: right .8s;
+      right: -100px;
+      width: 75px;
+      height: 75px;
+      figure{
+        margin: 0px;
+        width: 100%;
+        img{
+          border-radius: 6px;
+          opacity: 0.7;
+          transition: opacity .5s;
+          @include images;
+        }
+        &:hover img{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// responsive Design
+// for tablet view
+@media only screen and (min-device-width:700px) {
+  body{
+    main{
+      // changes in nav
+      nav{
+        .logo{
+          width: 200px;
+        }
+        .menu{
+          margin-left: 24.5%;
+          button{
+            height: 88px;
+            width: 88px;
+          }
+          .menu_content{
+            bottom: -379px;
+          }
+        }
+        .search{
+          input[type=search]{
+            width: 200px;
+            height: 23px;
+            &::placeholder{
+              font-size: 15px;
+            }
+          }
+          button{
+            height: 30px;
+            width: 30px;
+          }
+        }
+      }
+
+      .content{
+        padding-top: 87px;
+      }
+      // changes for footer
+      footer{
+        // changed the sizes abit
+        form{
+          .wrapper_form{
+            .h2_wrapper{
+              img{
+                width: 30px;
+              }
+              h2{
+                margin: 5px 0px;
+                font-size: 30px;
+              }
+            }
+            p{
+              font-size: 15px;
+            }
+            input[type=email]{
+              width: 300px;
+              height: 25px;
+              font-size: 18px;
+              &::placeholder{
+                font-size: 18px;
+              }
+            }
+            button[type=submit]{
+              width: 150px;
+              height: 40px;
+              p{
+                font-size: 25px;
+              }
+              &:hover{
+                width: 165px;
+              }
+            }
+          }
+        }
+        // changed the sizes abit
+        .footer1{
+          display: block;
+          .contact_info{
+            padding: 0px 15px;
+            .p_wrapper{
+              *{
+                vertical-align: middle;
+              }
+              img{
+                width: 15px;
+                padding: 5px;
+              }
+              p{
+                font-size: 20px;
+              }
+            }
+          }
+          .list{
+            width: 30%;
+            ul{
+              h3{
+                font-size: 20px;
+              }
+              li{
+                a{
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+      #scroll_top{
+        height: 60px;
+        figure{
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width:1000px) {
+  body{
+    main{
+      nav{
+        .logo{
+        }
+        .menu{
+          margin-left: 0;
+          position: static;
+          // height: 30px;
+          button{
+            display: none;
+          }
+          .menu_content{
+            width: 65vw;
+            text-align: center;
+            display: inline-block;
+            position: static;
+            a{
+              padding: 0px 5px;
+              border-style: none;
+              font-size: 20px;
+              width:auto;
+            }
+            .menu_content_last{
+              border-style: none;
+            }
+            &:hover{
+              animation: none;
+            }
+          }
+
+        }
+        .search{
+          right: 50px;
+          input[type=search]{
+            display: inline-block;
+          }
+          button{
+            height: 25px;
+            width: 25px;
+          }
+        }
+      }
+      // changes in footer
+      footer{
+        // changes in sizes
+        form{
+          .wrapper_form{
+            // chage to head
+            .h2_wrapper{
+              h2{
+                margin: 0px;
+              }
+            }
+            p{
+              font-size: 15px;
+            }
+            input[type=email]{
+              width: 250px;
+              height: 20px;
+              font-size: 16px;
+              &::placeholder{
+                font-size: 16px;
+              }
+            }
+            button[type=submit]{
+              width: 100px;
+              height: 30px;
+              p{
+                font-size: 20px;
+              }
+              &:hover{
+                width:110px;
+              }
+            }
+          }
+
+        }
+        // the needed information
+        .footer1{
+          margin: 0px 17%;
+          .contact_info{
+            .p_wrapper{
+              img{
+                width: 12px;
+              }
+              p{
+                font-size: 17px;
+              }
+
+            }
+          }
+          .list{
+            ul{
+              h3{
+                font-size: 17px;
+              }
+              li{
+                a{
+                  font-size: 17px;
+                }
+              }
+            }
+          }
+        }
+        // the copyright
+        .footer2{
+          p{
+            font-size: 15px;
+          }
+        }
+      }
+      #scroll_top{
+        bottom: 1vh;
+        width: 60px;
+        figure{
+          width: 75%;
+        }
+      }
+    }
+  }
+}

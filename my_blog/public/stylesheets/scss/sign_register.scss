@@ -1,0 +1,58 @@
+// font
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body{
+  background-image: url("../../images/old-1130743_960_720.jpg");
+  background-size: cover;
+  // remove margin
+  margin: 0px;
+  // sets fonts
+  *{
+    font-family: 'Slabo 27px', serif;
+    font-family: 'Quicksand', sans-serif;
+  }
+  main{
+    // centers the form
+    padding: 10vh 35%;
+    form{
+      background-color: white;
+      // gives padding
+      padding: 30px 0px;
+      padding-left: 20%;
+      border-radius: 6px;
+      // a box shadow
+      box-shadow: 0px 1px 20px 8px #705947;
+      -webkit-box-shadow: 0px 1px 20px 8px #705947;
+      .results_statement{
+        color: red;
+      }
+      // the h3 and p
+      h3,p{
+        margin: 10px 0px;
+      }
+      // the submit or log in button
+      button{
+        margin-right:50%;
+        border: none;
+        outline: none;
+        background-color: #195d97;
+        border-radius: 6px;
+        // color and margin
+        p{
+          color: white;
+          margin: 9px 4px;
+        }
+        // on hover
+        &:hover{
+          background-color: #15446c;
+        }
+      }
+      // the inputs
+      input{
+        // gives space below each input
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

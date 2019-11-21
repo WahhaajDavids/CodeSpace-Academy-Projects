@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="view-port" content="width=device-width, initial-scale=1">
+    <title>Contact | CODE4CT</title>
+    <!-- the style tag for nav and footer -->
+    <link rel="stylesheet" href="styles/css/nav_footer_style.css">
+    <!-- stylesheet for header -->
+    <link rel="stylesheet" href="styles/css/header_style.css">
+    <!-- the pages styles -->
+    <link rel="stylesheet" href="styles/css/contact.css">
+    <!-- icon -->
+    <link rel="icon" href="images\icons\Favicon_Code4CT-150x150.png">
+  </head>
+  <body>
+    <main>
+      <!-- the nav  -->
+      <!-- its the same for every page -->
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="images\icons\logo.png" alt="" class="logo">
+        </a>
+        <!-- the dropdown menu -->
+        <div class="menu">
+          <button type="button" name="button">
+            <figure>
+              <img src="images\icons\burger.png" alt="menu">
+            </figure>
+          </button>
+          <div class="menu_content" >
+            <a href="index.html" >HOME</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="courses.html">COURSES</a>
+            <a href="about.html">ABOUT</a>
+            <!-- <a href="services.html">services</a> -->
+            <a href="contact.html" class="menu_content_last" style="color:#e38f84">CONTACT</a>
+          </div>
+        </div>
+        <div class="search">
+          <input id="search_box" type="search" name="search" placeholder="search" >
+          <button type="button" name="button" onclick="search_button()">
+            <figure>
+              <img src="images\icons\search2.png" alt="search">
+            </figure>
+          </button>
+        </div>
+      </nav>
+      <!-- the main content of the page -->
+      <div class="content">
+        <!-- the header -->
+        <!-- its the same for a few pages -->
+        <header>
+          <div class="wrapper_head">
+            <h1>Contact Us</h1>
+            <p>
+              <a href="index.html" style="color:#e38f84">Home</a> &rarr;
+              <a href="contact.html">Contact</a>
+            </p>
+
+          </div>
+        </header>
+        <!-- the wrapper for the contact -->
+        <div class="contact_wrapper">
+          <!-- the contact -->
+          <section class="contact">
+            <!-- the contact form -->
+            <form class="message" action="index.html" method="post">
+              <h2><span class="span1">Send</span><span class="span2"> Us a Message</span></h2>
+                <input type="name" name="name" value="" placeholder="Your Name" required>
+                <input type="email" name="email" value="" placeholder="Your Email"required>
+                <input type="number" name="number" value="" placeholder="Phone Number" required>
+                <textarea name="name" rows="8" cols="80" maxlength="500"></textarea>
+                <button type="submit" name="button"><p>submit</p></button>
+            </form>
+            <article class="contact_info contact_info2">
+              <h2>
+                <span class="span1">Contact</span><span class="span2"> Info</span></h2>
+              <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+              <div class="p_wrapper">
+                <img src="images\icons\New folder\tel.png" alt="">
+                <p>+(021)-685-0991</p>
+              </div>
+              <div class="p_wrapper">
+                <img src="images\icons\New folder\email.png" alt="">
+                <p>Code4CT@gmail.com</p>
+              </div>
+              <div class="p_wrapper">
+                <img src="images\icons\New folder\clock.png" alt="">
+                <p>Mon-Fri 09:00 to 12:00</p>
+              </div>
+              <div class="p_wrapper">
+                <img src="images\icons\New folder\address.png" alt="">
+                <p>Innovate South Africa, 403 Old Castle Brewery, 6 Beach Rd, Woodstock, Cape Town, 7915</p>
+              </div>
+            </article>
+
+          </section>
+        </div>
+        <!-- this is the google maps -->
+        <section class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6621.276100068998!2d18.448715!3d-33.924714!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6a0ebf49da5aabab!2sCodeSpace!5e0!3m2!1sen!2sza!4v1510843902009" width="100%"  frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        </section>
+      </div>
+      <!-- the footer -->
+      <!-- its the same for every page -->
+      <footer>
+        <section class="footer1">
+          <article class="contact_info">
+            <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\tel.png" alt="">
+              <p>+(021)-685-0991</p>
+            </div>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\email.png" alt="">
+              <p>Code4CT@gmail.com</p>
+            </div>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\address.png" alt="">
+              <p>Innovate South Africa, 403 Old Castle Brewery, 6 Beach Rd, Woodstock, Cape Town, 7915</p>
+            </div>
+          </article>
+          <article class=" list list1">
+            <ul>
+              <h3>Code4CT</h3>
+              <li><a href="about.html" style="color:#e38f84">About us</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Affliated programmes</a></li>
+            </ul>
+          </article>
+          <article class="list list2">
+            <ul>
+              <h3>Help & Support</h3>
+              <li><a href="#">Help centre</a></li>
+              <li><a href="#">Free simple template</a></li>
+              <li><a href="#">Refund policy</a></li>
+              <li><a href="#">Report spam</a></li>
+            </ul>
+          </article>
+
+        </section>
+        <section class="footer2">
+          <p>copyright &copy; 2018 PRIVACY POLICY</p>
+          <p>Follow us:
+            <a href="https://www.facebook.com/code4ct/" target="_blank">
+              <img src="images\icons\Social media\facebook_logo.png" alt="">
+            </a>
+            <a href="https://twitter.com/@code4ct" target="_blank">
+              <img src="images\icons\Social media\icon-twitter.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/code4ct/" target="_blank">
+              <img src="images\icons\Social media\instagram-icon-good.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="images\icons\Social media\google+.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/company/code-for-cape-town/" target="_blank">
+              <img src="images\icons\Social media\linkedin-icon-logo-black-and-white.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="images\icons\Social media\Skype_icon.svg" alt="">
+            </a>
+          </p>
+        </section>
+      </footer>
+      <!-- the fixed scroll to top button -->
+      <div id="scroll_top" onclick="topScreen()">
+        <figure>
+          <img src="images\icons\up_arrow.png" alt="up To Top">
+        </figure>
+      </div>
+    </main>
+    <!-- the script tag for nav and footer -->
+    <script src="scripts/nav_footer_script.js" type="text/javascript"></script>
+  </body>
+</html>

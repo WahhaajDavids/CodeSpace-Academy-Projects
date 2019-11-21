@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>count down timer</title>
+    <style media="screen">
+    body,p{
+      background-color: dimgrey;
+    }
+      main,#date{
+        background-color: white;
+        margin-top: 40vh;
+      }
+      #date{
+        border: 10px solid black;
+      }
+      p{
+        margin: 0px;
+        text-align: center;
+      }
+      #day,#time{
+        font-size: 70px;
+        height: 100%;
+      }
+      #day{
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p id="date">
+        <span id="day"></span>
+        <span id="time"></span>
+      </p>
+      <p>Countdown to my Birthday!!</p>
+    </main>
+    <script type="text/javascript">
+    'use strict'
+    // set the countdown date
+    let countDown = new Date('oct 30, 2018').getTime();
+
+    // update the clock every 1 second
+    let x = setInterval(function(){
+
+      // set our current time
+      let now = new Date().getTime();
+
+      // set the distance between the two dates
+      let distance = countDown - now;
+
+      // finding the days,hours,minutes and seconds
+      let days = Math.floor(distance/(1000*60*60*24));
+      let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // display the results
+      // displa the day
+      document.getElementById('day').innerHTML = days+'d ';
+
+      // display the time
+      document.getElementById('time').innerHTML = hours+'h '+minutes+'m '+seconds+'s';
+
+      // when the count down finishes
+      if (distance<0){
+        clearInterval(x);
+        document.getElementById('day').innerHTML = 'EXPIRED';
+        document.getElementById('time').style.display = "none";
+      }
+      },1000);
+
+
+
+    </script>
+  </body>
+</html>

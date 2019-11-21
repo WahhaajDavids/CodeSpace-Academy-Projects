@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="view-port" content="width=device-width, initial-scale=1">
+    <title>Courses | CODE4CT</title>
+    <!-- the style tag for nav and footer -->
+    <link rel="stylesheet" href="styles/css/nav_footer_style.css">
+    <!-- stylesheet for header -->
+    <link rel="stylesheet" href="styles/css/header_style.css">
+    <!-- the pages styles -->
+    <link rel="stylesheet" href="styles/css/courses.css">
+    <!-- icon -->
+    <link rel="icon" href="images\icons\Favicon_Code4CT-150x150.png">
+    <script src="scripts\jQuery\jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <!-- the nav  -->
+      <!-- its the same for every page -->
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="images\icons\logo.png" alt="" class="logo">
+        </a>
+        <!-- the dropdown menu -->
+        <div class="menu">
+          <button type="button" name="button">
+            <figure>
+              <img src="images\icons\burger.png" alt="menu">
+            </figure>
+          </button>
+          <div class="menu_content" >
+            <a href="index.html" >HOME</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="courses.html" style="color:#e38f84">COURSES</a>
+            <a href="about.html">ABOUT</a>
+            <!-- <a href="services.html">services</a> -->
+            <a href="contact.html" class="menu_content_last">CONTACT</a>
+          </div>
+        </div>
+        <div class="search">
+          <input id="search_box" type="search" name="search" placeholder="search" >
+          <button type="button" name="button" onclick="search_button()">
+            <figure>
+              <img src="images\icons\search2.png" alt="search">
+            </figure>
+          </button>
+        </div>
+      </nav>
+      <!-- the main content of the page -->
+      <div class="content">
+        <!-- the header -->
+        <!-- its the same for a few pages -->
+        <header>
+          <div class="wrapper_head">
+            <h1>Our Courses</h1>
+            <p>
+              <a href="index.html" style="color:#e38f84">Home</a> &rarr;
+              <a href="courses.html">Courses</a>
+            </p>
+
+          </div>
+        </header>
+        <!-- the courses to select from -->
+        <section class="courses">
+          <!-- the course sections -->
+          <h2><span class="span1">Individual</span><span class="span2"> Courses</span></h2>
+          <!-- each individual course -->
+          <article class="course_option">
+            <h3>Intro to Coding: Web Pages</h3>
+            <p>Code a simple one-page website using HTML and JQuery.
+              <br>
+              <b>Duration:</b> 3 hours
+              <br>
+              <b>Price:</b> R250
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(0)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Intro to Coding: Music</h3>
+            <p>Code a song using SonicPi software on a Raspberry Pi computer.
+              <br>
+              <b>Duration:</b> 3 hours
+              <br>
+              <b>Price:</b> R250
+            </p>
+              <button type="button" name="button" onclick="$(this).courseSelect(1)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Intro to Coding: Animation</h3>
+            <p>Create a 2D animation using coding language JavaScript.
+              <br>
+              <b>Duration:</b> 3 hours
+              <br>
+              <b>Price:</b> R250
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(2)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Create with Code: Web Pages</h3>
+            <p>Learn how the internet works and code a simple one-page website using HTML, CSS and JQuery.
+              <br>
+              <b>Duration:</b> 3 days
+              <br>
+              <b>Price:</b> R960
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(3)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Create with Code: Music</h3>
+            <p>Learn computer science principles by coding music with a Raspberry Pi computer.
+              <br>
+              <b>Duration:</b> 3 days
+              <br>
+              <b>Price:</b> R960
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(4)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Create with Code: Animation</h3>
+            <p>Learn computer science principles by coding animations using JavaScript.
+              <br>
+              <b>Duration:</b>: 3 days
+              <br>
+              <b>Price:</b> R960
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(5)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Getting started as a developer</h3>
+            <p>Learn how to set up a development environment and practical skills to start coding.
+              <br>
+              <b>Duration:</b> 3 hours
+              <br>
+              <b>Price:</b> R250
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(6)"><p>select</p></button>
+          </article>
+
+          <h2><span class="span1">Beginner</span><span class="span2"> Coding Courses</span></h2>
+          <article class="course_option">
+            <h3>Beginner JavaScript</h3>
+            <p>Develop a basic proficiency in programming structures and methods in JavaScript so that you are able to create an interactive web application
+              <br>
+              <b>Duration:</b> 6 days
+              <br>
+              <b>Price:</b> R1800
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(7)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Beginner Front End Web Development</h3>
+            <p>Develop a good proficiency in CSS and an understanding of web design principles so that you are able to create visually pleasing web pages.
+              <br>
+              <b>Duration:</b> 6 days
+              <br>
+              <b>Price:</b> R1800
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(8)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Beginner Python</h3>
+            <p>Develop a basic proficiency in programming principles and methods in Python.
+              <br>
+              <b>Duration:</b> 6 days
+              <br>
+              <b>Price:</b> R1800
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(9)"><p>select</p></button>
+          </article>
+
+          <h2><span class="span1">Intermediate</span><span class="span2"> Coding Courses</span></h2>
+          <article class="course_option">
+            <h3>Full Stack JavaScript</h3>
+            <p>Develop an understanding of the front and backend development environment and basic proficiency in server side JavaScript and object-oriented programming. By the end of the course you will be able to architect an application, control flow in an application and persist and retrieve data in a database.
+              <br>
+              <b>Duration:</b> 6 days
+              <br>
+              <b>Price:</b> R1800
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(10)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Website Deployment</h3>
+            <p>Learn how to manage and deploy code to a server environment so that you can host your own web pages.
+              <br>
+              <b>Duration:</b> 4 days
+              <br>
+              <b>Price:</b> R1200
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(11)"><p>select</p></button>
+          </article>
+
+          <h2><span class="span1">Career </span><span class="span2">and Life Skills</span></h2>
+          <article class="course_option">
+            <h3>Code Conversation</h3>
+            <p>Learn about tech careers from a panel of working professionals who will share their experiences with you.
+              <br>
+              <b>Duration:</b> 1 day
+              <br>
+              <b>Price:</b> R300
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(12)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Presentation Skills</h3>
+            <p>Learn how to present an idea or project in a compelling manner.
+              <br>
+              <b>Duration:</b> 1 day
+              <br>
+              <b>Price:</b> R300
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(13)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>CV & LinkedIn</h3>
+            <p>Learn how to present your skills effectively.
+              <br>
+              <b>Duration:</b> 1 day
+              <br>
+              <b>Price:</b> R300
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(14)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Networking</h3>
+            <p>Learn how to present yourself professionally when networking and put your skills to the test by attending local tech events. You will attend a training session and attend one event of your choice.
+              <br>
+              <b>Duration:</b> 2 days
+              <br>
+              <b>Price:</b> R300
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(15)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Digital Communication Skills</h3>
+            <p>Learn how to communicate and collaborate in a 21st century work  environment using digital workplace tools.
+              <br>
+              <b>Duration:</b> 1 day
+              <br>
+              <b>Price:</b> R300
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(16)"><p>select</p></button>
+          </article>
+          <article class="course_option">
+            <h3>Applying to Tertiary Studies</h3>
+            <p>Make informed decisions about your future studies.
+              <br>
+              <b>Duration:</b> 1 day
+              <br>
+              <b>Price:</b> R300
+            </p>
+            <button type="button" name="button" onclick="$(this).courseSelect(17)"><p>select</p></button>
+          </article>
+        </section>
+        <!-- the basket to check out the products -->
+        <section class="shopping_cart">
+          <div class="cart_wrapper">
+            <button type="button" name="button" class="cart_button" onclick="">
+              <figure>
+                <img src="images\icons\basket.png" alt="">
+              </figure>
+            </button>
+            <div class="cart">
+              <!-- the list of selected courses for register -->
+              <!-- the courses will be added by javaScript -->
+              <div class="cart_list">
+                <!-- <button type="button" name="button" id="closeCart">
+                  <figure>
+                    <img src="images\icons\close-icon.png" alt="close">
+                  </figure>
+                </button> -->
+                <h2>Selected Courses</h2>
+                <p>Course Name | Duration | Price</p>
+              </div>
+              <div class="check_out">
+                <div class="button_wrapper">
+                  <button type="button" name="button" id="register_button" onclick="registerClick()"><p>Register</p></button>
+                  <button type="button" name="button"id="cancel_button" onclick="$(this).removeAll()"><p>Cancel All</p></button>
+                </div>
+                <figure>
+                  <img src="images\paypal.png" alt="we accept paypal">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="register_wrapper" onclick="registerWrapper()">
+        </div>
+        <div id="register">
+          <h3>Registration</h3>
+          <p>Courses Selected: x<span id="register_course"></span></p>
+          <p>Total Cost: R<span id="register_total"></span></p>
+          <button type="button" name="button" onclick="acceptFunction()"><p>Accept</p></button>
+        </div>
+      </div>
+      <!-- the footer -->
+      <!-- its the same for every page -->
+      <footer>
+        <!-- a form to subscribe -->
+        <form class="subscribe" action="index.html" method="post">
+          <!-- the form wrapper-->
+          <div class="wrapper_form">
+            <!-- the heading wrapper-->
+            <div class="h2_wrapper">
+              <img src="images\icons\New folder\subscribe.png" alt="subscribe">
+              <h2>Subscribe to us</h2>
+            </div>
+            <p>recieve notifications through email</p>
+            <input type="email" name="email" required placeholder="enter your email">
+            <button type="submit" name="submit"><p>submit</p></button>
+          </div>
+        </form>
+        <!-- wrapper for the companies -->
+        <div class="wrapper_comp">
+          <!-- the carousel -->
+          <marquee class="companies">
+            <!-- the images in the carousel -->
+            <figure>
+              <img src="images\companys\deloitte-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\lwandlelogo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\mazars-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\Mobenzi_Logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\openboxlogo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\Takealot-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\TNS-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\deloitte-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\lwandlelogo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\mazars-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\Mobenzi_Logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\openboxlogo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\Takealot-logo..jpg" alt="assotiated company">
+            </figure>
+            <figure>
+              <img src="images\companys\TNS-logo..jpg" alt="assotiated company">
+            </figure>
+          </marquee>
+        </div>
+        <section class="footer1">
+          <article class="contact_info">
+            <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\tel.png" alt="">
+              <p>+(021)-685-0991</p>
+            </div>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\email.png" alt="">
+              <p>Code4CT@gmail.com</p>
+            </div>
+            <div class="p_wrapper">
+              <img src="images\icons\New folder\address.png" alt="">
+              <p>Innovate South Africa, 403 Old Castle Brewery, 6 Beach Rd, Woodstock, Cape Town, 7915</p>
+            </div>
+          </article>
+          <article class=" list list1">
+            <ul>
+              <h3>Code4CT</h3>
+              <li><a href="about.html" style="color:#e38f84">About us</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Affliated programmes</a></li>
+            </ul>
+          </article>
+          <article class="list list2">
+            <ul>
+              <h3>Help & Support</h3>
+              <li><a href="#">Help centre</a></li>
+              <li><a href="#">Free simple template</a></li>
+              <li><a href="#">Refund policy</a></li>
+              <li><a href="#">Report spam</a></li>
+            </ul>
+          </article>
+
+        </section>
+        <section class="footer2">
+          <p>copyright &copy; 2018 PRIVACY POLICY</p>
+          <p>Follow us:
+            <a href="https://www.facebook.com/code4ct/" target="_blank">
+              <img src="images\icons\Social media\facebook_logo.png" alt="">
+            </a>
+            <a href="https://twitter.com/@code4ct" target="_blank">
+              <img src="images\icons\Social media\icon-twitter.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/code4ct/" target="_blank">
+              <img src="images\icons\Social media\instagram-icon-good.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="images\icons\Social media\google+.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/company/code-for-cape-town/" target="_blank">
+              <img src="images\icons\Social media\linkedin-icon-logo-black-and-white.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="images\icons\Social media\Skype_icon.svg" alt="">
+            </a>
+          </p>
+        </section>
+      </footer>
+      <!-- the fixed scroll to top button -->
+      <div id="scroll_top" onclick="topScreen()">
+        <figure>
+          <img src="images\icons\up_arrow.png" alt="up To Top">
+        </figure>
+      </div>
+    </main>
+    <!-- the script for this page -->
+    <script src="scripts\courses_script.js" type="text/javascript">
+
+    </script>
+    <!-- the script tag for nav and footer -->
+    <script src="scripts/nav_footer_script.js" type="text/javascript"></script>
+  </body>
+</html>

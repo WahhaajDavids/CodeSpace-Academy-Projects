@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="number" name="" value="" id="input">
+    <button type="button" id="button" name="button">click</button>
+    <div id="results">
+
+    </div>
+
+    <script type="text/javascript">
+      'use strict';
+
+      let creditCardCode;
+
+      document.getElementById('button').addEventListener('click',maskify);
+
+      function maskify(){
+        let input = document.getElementById('input').value;
+        creditCardCode = input;
+        for(let i = 0;i<input.length-4;i++){
+          input = input.substr(0,i) + "#" + input.substr(i+1);
+        };
+        document.getElementById('results').innerHTML = input;
+      };
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+/* comments in .scss file*/
+@keyframes fadeMenu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+body main .content .courses {
+  padding: 0px 10%; }
+  body main .content .courses h2 {
+    text-align: center;
+    font-size: 40px; }
+    body main .content .courses h2 .span1 {
+      border-bottom: 3px solid #e38f84; }
+    body main .content .courses h2 .span2 {
+      border-bottom: 2px solid #797979; }
+  body main .content .courses .course_option {
+    border-radius: 6px;
+    box-shadow: 3px 5px 20px #00000052;
+    -webkit-box-shadow: 3px 5px 20px #00000052;
+    vertical-align: top;
+    width: 80%;
+    padding: 10px 75px;
+    padding-bottom: 100px; }
+    body main .content .courses .course_option h3 {
+      margin: 0px;
+      color: #e38f84;
+      font-size: 35px; }
+    body main .content .courses .course_option p {
+      font-size: 25px; }
+    body main .content .courses .course_option button {
+      position: absolute;
+      background-color: #e38f84;
+      border: none;
+      color: white;
+      margin: 10px;
+      width: 200px;
+      height: 50px; }
+      body main .content .courses .course_option button:hover {
+        width: 220px; }
+      body main .content .courses .course_option button p {
+        margin: 0;
+        font-size: 30px; }
+body main .content .shopping_cart {
+  position: fixed;
+  top: 125px;
+  right: 20px;
+  z-index: 1; }
+  body main .content .shopping_cart .cart_wrapper {
+    position: relative; }
+    body main .content .shopping_cart .cart_wrapper .cart_button {
+      width: 90px;
+      height: 90px;
+      background-color: transparent;
+      border: none;
+      border-radius: 6px;
+      overflow: hidden; }
+      body main .content .shopping_cart .cart_wrapper .cart_button figure {
+        position: relative;
+        margin: 0px;
+        width: 99.99%; }
+        body main .content .shopping_cart .cart_wrapper .cart_button figure img {
+          opacity: 0.6;
+          width: 100%;
+          height: 100%; }
+    body main .content .shopping_cart .cart_wrapper .cart {
+      box-shadow: -8px 17px 20px #00000052;
+      -webkit-box-shadow: -8px 17px 20px #00000052;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      display: none;
+      background-color: #f7f7f7;
+      position: absolute;
+      top: -11px;
+      right: -20px;
+      height: 89vh;
+      width: 40vw; }
+      body main .content .shopping_cart .cart_wrapper .cart .cart_list {
+        margin: 5px 2.5%;
+        background-color: #e38f84;
+        width: 95%;
+        height: 75%;
+        overflow: hidden;
+        overflow-y: auto; }
+        body main .content .shopping_cart .cart_wrapper .cart .cart_list h2, body main .content .shopping_cart .cart_wrapper .cart .cart_list p {
+          color: white;
+          margin: 5px;
+          text-decoration: underline; }
+        body main .content .shopping_cart .cart_wrapper .cart .cart_list h2 {
+          font-size: 40px; }
+        body main .content .shopping_cart .cart_wrapper .cart .cart_list p {
+          font-size: 30px;
+          text-decoration: none;
+          margin-bottom: 30px; }
+        body main .content .shopping_cart .cart_wrapper .cart .cart_list .selected_courses {
+          animation: fadeMenu .7s;
+          background-color: white;
+          margin: 5px 4px;
+          border-radius: 6px; }
+          body main .content .shopping_cart .cart_wrapper .cart .cart_list .selected_courses p, body main .content .shopping_cart .cart_wrapper .cart .cart_list .selected_courses button {
+            display: inline-block;
+            vertical-align: middle; }
+          body main .content .shopping_cart .cart_wrapper .cart .cart_list .selected_courses p {
+            color: grey;
+            margin: 0px;
+            width: 85%; }
+          body main .content .shopping_cart .cart_wrapper .cart .cart_list .selected_courses button {
+            border: none;
+            padding: 0px;
+            background-color: transparent;
+            width: 11%; }
+            body main .content .shopping_cart .cart_wrapper .cart .cart_list .selected_courses button figure {
+              margin: 0px; }
+              body main .content .shopping_cart .cart_wrapper .cart .cart_list .selected_courses button figure img {
+                opacity: 0.6;
+                transition: opacity 0.3s;
+                width: 100%;
+                height: 100%; }
+            body main .content .shopping_cart .cart_wrapper .cart .cart_list .selected_courses button:hover figure img {
+              opacity: 1; }
+      body main .content .shopping_cart .cart_wrapper .cart .check_out {
+        position: relative;
+        height: 23%;
+        width: 95%;
+        margin: 5px 2.5%; }
+        body main .content .shopping_cart .cart_wrapper .cart .check_out .button_wrapper {
+          position: absolute;
+          left: 20%; }
+          body main .content .shopping_cart .cart_wrapper .cart .check_out .button_wrapper button {
+            margin: 2px 0px;
+            color: white;
+            background-color: #e38f84;
+            border: none;
+            width: 200px;
+            height: 50px;
+            box-shadow: inset 3px 5px 20px #00000052;
+            -webkit-box-shadow: inset 3px 5px 20px #00000052; }
+            body main .content .shopping_cart .cart_wrapper .cart .check_out .button_wrapper button p {
+              text-shadow: 3px 5px 20px #000000;
+              -webkit-text-shadow: 3px 5px 20px #000000; }
+            body main .content .shopping_cart .cart_wrapper .cart .check_out .button_wrapper button:hover {
+              width: 220px; }
+            body main .content .shopping_cart .cart_wrapper .cart .check_out .button_wrapper button p {
+              font-size: 20px;
+              margin: 0px; }
+          body main .content .shopping_cart .cart_wrapper .cart .check_out .button_wrapper #cancel_button {
+            background-color: #797979; }
+        body main .content .shopping_cart .cart_wrapper .cart .check_out figure {
+          margin: 0px;
+          width: 100%;
+          position: absolute;
+          top: 117px; }
+          body main .content .shopping_cart .cart_wrapper .cart .check_out figure img {
+            width: 100%;
+            height: 100%; }
+    body main .content .shopping_cart .cart_wrapper:hover .cart {
+      display: block;
+      animation: fadeMenu .7s; }
+body main .content #register_wrapper {
+  display: none;
+  animation: fadeMenu .7s;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 3;
+  background-color: #000000db; }
+body main .content #register {
+  animation: fadeMenu .7s;
+  background-color: white;
+  position: fixed;
+  z-index: 4;
+  top: 20vh;
+  padding: 1vh 0px;
+  border-radius: 6px;
+  border: 3px solid #e38f84;
+  display: none;
+  width: 90%;
+  margin: 0px 5%;
+  text-align: center; }
+  body main .content #register h3 {
+    font-size: 40px;
+    color: #e38f84; }
+  body main .content #register P {
+    font-size: 30px; }
+  body main .content #register button {
+    background-color: #e38f84;
+    border: none;
+    color: white;
+    margin: 10px;
+    width: 200px;
+    height: 50px; }
+    body main .content #register button:hover {
+      width: 220px; }
+    body main .content #register button p {
+      margin: 0;
+      font-size: 30px; }
+
+@media only screen and (min-device-width: 450px) {
+  body main .content .shopping_cart .cart_wrapper .cart .check_out figure {
+    top: 100px;
+    width: 90%; } }
+@media only screen and (min-device-width: 700px) {
+  body main .content .courses {
+    padding: 0px 9%; }
+    body main .content .courses h2 {
+      font-size: 35px; }
+    body main .content .courses .course_option {
+      display: inline-block;
+      width: 40%;
+      padding: 10px 20px;
+      padding-bottom: 80px; }
+      body main .content .courses .course_option h3 {
+        font-size: 30px; }
+      body main .content .courses .course_option p {
+        font-size: 25px; }
+      body main .content .courses .course_option button {
+        width: 150px;
+        height: 40px; }
+        body main .content .courses .course_option button p {
+          font-size: 20px; }
+        body main .content .courses .course_option button:hover {
+          width: 165px; }
+  body main .content .shopping_cart .cart_wrapper .cart {
+    top: -20px; }
+    body main .content .shopping_cart .cart_wrapper .cart .cart_list h2 {
+      font-size: 30px; }
+    body main .content .shopping_cart .cart_wrapper .cart .cart_list p {
+      font-size: 22px; }
+    body main .content .shopping_cart .cart_wrapper .cart .check_out button {
+      height: 45px; }
+    body main .content .shopping_cart .cart_wrapper .cart .check_out #cancel_button {
+      top: 60px; }
+  body main .content #register h3 {
+    font-size: 33px; }
+  body main .content #register p {
+    font-size: 22px; }
+  body main .content #register button {
+    width: 150px;
+    height: 40px; }
+    body main .content #register button p {
+      font-size: 20px; }
+    body main .content #register button:hover {
+      width: 165px; } }
+@media only screen and (min-device-width: 1020px) {
+  body main .content {
+    display: grid;
+    grid-template-columns: 1fr 25%; }
+    body main .content header {
+      grid-column: 1/3;
+      grid-row: 1/2; }
+    body main .content .courses {
+      padding-right: 5%;
+      grid-row: 2/3;
+      grid-column: 1/2; }
+      body main .content .courses h2 {
+        font-size: 30px; }
+      body main .content .courses .course_option {
+        width: 26%; }
+        body main .content .courses .course_option h3 {
+          font-size: 20px; }
+        body main .content .courses .course_option p {
+          font-size: 15px; }
+        body main .content .courses .course_option button {
+          width: 100px;
+          height: 30px; }
+          body main .content .courses .course_option button p {
+            font-size: 15px; }
+          body main .content .courses .course_option button:hover {
+            width: 110px; }
+    body main .content .shopping_cart {
+      height: 86.8vh;
+      grid-row: 2/3;
+      grid-column: 2/3;
+      position: sticky;
+      top: 87px;
+      right: 0; }
+      body main .content .shopping_cart .cart_wrapper .cart_button {
+        display: none; }
+      body main .content .shopping_cart .cart_wrapper .cart {
+        display: block;
+        position: static;
+        width: 100%;
+        height: 85.8vh; }
+        body main .content .shopping_cart .cart_wrapper .cart .cart_list h2 {
+          font-size: 20px; }
+        body main .content .shopping_cart .cart_wrapper .cart .cart_list p {
+          font-size: 15px; }
+        body main .content .shopping_cart .cart_wrapper .cart .check_out .button_wrapper {
+          left: 15%; }
+        body main .content .shopping_cart .cart_wrapper .cart .check_out figure {
+          display: none; }
+      body main .content .shopping_cart .cart_wrapper:hover .cart {
+        animation: none; }
+    body main .content #register {
+      width: 60%;
+      margin: 0px 20%; } }
+
+/*# sourceMappingURL=courses.css.map */

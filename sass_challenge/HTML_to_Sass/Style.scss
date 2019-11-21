@@ -1,0 +1,27 @@
+body{background: darkgrey;
+     color: black;
+     margin-left:auto;
+     margin-right:auto;
+
+}
+
+@keyframes head {1%{color: silver;}
+                50%{color: gold;}
+}
+
+p{font-family: cursive;
+  font-style: italic;
+}
+
+h1{color: silver;
+  animation-name: head;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  padding: 30px;
+  background: black;
+
+ }
+
+ h2,h3{color: red;
+
+ }

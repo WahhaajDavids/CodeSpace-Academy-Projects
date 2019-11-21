@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- usual styles -->
+    <link rel="stylesheet" href="/stylesheets/css/nav_footer.css">
+    <link rel="stylesheet" href="/stylesheets/css/create.css">
+
+    <style media="screen">
+      .archive_page{
+        color: red;
+      }
+      /* to fix slight problems with bootstrap */
+        .nav_link{
+          margin-bottom: 2px;
+        }
+        .static_nav{
+          padding-top: 4px;
+        }
+        .sign_button{
+          margin: 15% 0px !important;
+        }
+        .or{
+          padding-top: 11px;
+        }
+        .signedIn{
+          padding-top: 8px !important;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <% include templates/nav.ejs %>
+
+      <!-- bootstrap -->
+      <div class="container">
+        <div class="row">
+          <% if (posts.length != 0){ %>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h2 class="panel-title"><%= posts[id].title %></h2>
+                <br>
+                <h2 class="panel-title"><%= posts[posts.length-1].date %></h2>
+              </div>
+              <div class="panel-body">
+                <figure class="figure">
+                  <img src="<%- posts[id].image %>"class="img-fluid" alt="Responsive image">
+                </figure>
+                <%- posts[id].content %>
+              </div>
+              <div class="panel-footer">
+                <p>Author: <%= posts[id].author %></p>
+                <div class="edit_delete">
+                    <%if(user == posts[id].author){%>
+                      <a href='/edit/<%-  posts[id].id %>'>
+                        <button type="button" name="button" class="edit_button"><p>Edit</p></button></a>
+                      <a href='/delete/<%- posts[id].id %>'>
+                        <button type="button" name="button" class="edit_button"><p>Delete</p></button></a>
+                    <%}%>
+                  </div>
+              </div>
+              <!-- displays if no blog posts are available -->
+            </div>
+          <% } else{ %>
+            <p>No available blog posts!</p>
+          <% }  %>
+        </div>
+      </div>
+      <% include templates/footer.ejs %>
+    </main>
+  </body>
+</html>

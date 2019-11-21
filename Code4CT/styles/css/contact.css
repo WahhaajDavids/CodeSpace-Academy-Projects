@@ -1,0 +1,116 @@
+/* comments in .scss file*/
+body main .content .contact_wrapper {
+  padding: 0px 5%; }
+  body main .content .contact_wrapper .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    body main .content .contact_wrapper .contact form {
+      padding-bottom: 100px;
+      position: relative;
+      grid-column: 1/3;
+      grid-row: 1/2; }
+      body main .content .contact_wrapper .contact form input {
+        width: 65%;
+        height: 30px;
+        margin: 10px 0px;
+        font-size: 25px; }
+        body main .content .contact_wrapper .contact form input::placeholder {
+          font-size: 25px; }
+      body main .content .contact_wrapper .contact form input[type=number]::-webkit-outer-spin-button,
+      body main .content .contact_wrapper .contact form input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0px; }
+      body main .content .contact_wrapper .contact form textarea {
+        font-size: 20px;
+        width: 65%;
+        height: 200px; }
+      body main .content .contact_wrapper .contact form button {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        background-color: #e38f84;
+        border: none;
+        color: white;
+        margin: 10px;
+        width: 200px;
+        height: 50px; }
+        body main .content .contact_wrapper .contact form button:hover {
+          width: 220px; }
+        body main .content .contact_wrapper .contact form button p {
+          margin: 0;
+          font-size: 30px; }
+      body main .content .contact_wrapper .contact form h2 .span1 {
+        border-bottom: 3px solid #e38f84; }
+      body main .content .contact_wrapper .contact form h2 .span2 {
+        border-bottom: 2px solid #797979; }
+    body main .content .contact_wrapper .contact .contact_info2 {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      font-size: 18px; }
+      body main .content .contact_wrapper .contact .contact_info2 .p_wrapper {
+        vertical-align: top;
+        font-size: 27px;
+        vertical-align: top; }
+        body main .content .contact_wrapper .contact .contact_info2 .p_wrapper * {
+          display: inline-block; }
+        body main .content .contact_wrapper .contact .contact_info2 .p_wrapper img {
+          border: 1px solid #797979;
+          width: 27px; }
+        body main .content .contact_wrapper .contact .contact_info2 .p_wrapper p {
+          width: 90%; }
+      body main .content .contact_wrapper .contact .contact_info2 h2 .span1 {
+        border-bottom: 3px solid #e38f84; }
+      body main .content .contact_wrapper .contact .contact_info2 h2 .span2 {
+        border-bottom: 2px solid #797979; }
+body main .content .maps iframe {
+  height: 600px;
+  filter: gray;
+  -webkit-filter: grayscale(99%); }
+
+@media only screen and (min-device-width: 700px) {
+  body main .content .contact_wrapper .contact form {
+    grid-column: 1/2;
+    grid-row: 1/2; }
+    body main .content .contact_wrapper .contact form input, body main .content .contact_wrapper .contact form textarea {
+      width: 80%; }
+    body main .content .contact_wrapper .contact form button {
+      width: 150px;
+      height: 40px; }
+      body main .content .contact_wrapper .contact form button p {
+        font-size: 25px; }
+      body main .content .contact_wrapper .contact form button:hover {
+        width: 165px; }
+  body main .content .contact_wrapper .contact .contact_info2 {
+    grid-column: 2/3;
+    grid-row: 1/2; }
+    body main .content .contact_wrapper .contact .contact_info2 .p_wrapper {
+      font-size: 18px; }
+      body main .content .contact_wrapper .contact .contact_info2 .p_wrapper img {
+        width: 15px;
+        padding: 5px; }
+  body main .content .maps iframe {
+    height: 500px; } }
+@media only screen and (min-device-width: 1020px) {
+  body main .content .contact_wrapper .contact {
+    grid-template-columns: 65% 1fr; }
+    body main .content .contact_wrapper .contact form input {
+      height: 20px;
+      width: 30%;
+      font-size: 18px; }
+      body main .content .contact_wrapper .contact form input::placeholder {
+        font-size: 18px; }
+      body main .content .contact_wrapper .contact form input textarea {
+        font-size: 18px; }
+      body main .content .contact_wrapper .contact form input button {
+        bottom: 30px;
+        width: 100px;
+        height: 30px; }
+        body main .content .contact_wrapper .contact form input button p {
+          font-size: 20px; }
+        body main .content .contact_wrapper .contact form input button:hover {
+          width: 110px; }
+    body main .content .contact_wrapper .contact form textarea {
+      width: 92.5%;
+      font-size: 18px; } }
+
+/*# sourceMappingURL=contact.css.map */

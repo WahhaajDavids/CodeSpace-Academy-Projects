@@ -1,0 +1,346 @@
+/* comments in .scss file*/
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@keyframes rotateButton {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(180deg); } }
+@keyframes fadeMenu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+html {
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0; }
+  body * {
+    transition: width .3s;
+    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif; }
+  body button {
+    outline: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px; }
+  body main nav {
+    z-index: 2;
+    background-color: white;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    border-bottom: 1px solid lightgrey; }
+    body main nav * {
+      display: inline-block;
+      vertical-align: middle; }
+    body main nav .logo {
+      width: 250px; }
+      body main nav .logo img {
+        width: 100%;
+        height: 100%; }
+    body main nav .menu {
+      height: 100%;
+      position: relative;
+      margin-left: 19%; }
+      body main nav .menu button {
+        height: 106px;
+        width: 106px;
+        padding: 10px;
+        background-color: white;
+        border: none;
+        outline: none;
+        overflow: hidden; }
+        body main nav .menu button figure {
+          margin: 0px;
+          width: 70%; }
+          body main nav .menu button figure img {
+            opacity: 0.6;
+            width: 100%;
+            height: 100%; }
+        body main nav .menu button:hover figure {
+          animation: rotateButton 0.7s; }
+      body main nav .menu:hover .menu_content {
+        display: block;
+        animation: fadeMenu 0.7s; }
+      body main nav .menu .menu_content {
+        background-color: white;
+        text-align: center;
+        display: none;
+        position: absolute;
+        left: -45.5vw;
+        bottom: -380px;
+        width: 101vw; }
+        body main nav .menu .menu_content a {
+          border-bottom: 1px solid lightgrey;
+          font-size: 30px;
+          text-decoration: none;
+          color: grey;
+          padding: 20px  0px;
+          width: 100%; }
+          body main nav .menu .menu_content a:hover {
+            color: #e38f84; }
+        body main nav .menu .menu_content .menu_content_last {
+          border-bottom: 4px solid lightgrey; }
+    body main nav .search {
+      position: absolute;
+      top: 35%;
+      right: 30px; }
+      body main nav .search input[type=search] {
+        width: 220px;
+        height: 25px;
+        display: none; }
+        body main nav .search input[type=search]::placeholder {
+          font-size: 20px; }
+      body main nav .search button {
+        background-color: white;
+        border: 1px solid lightgrey;
+        height: 40px;
+        width: 40px; }
+        body main nav .search button figure {
+          width: 100%;
+          margin: 0px; }
+          body main nav .search button figure img {
+            width: 100%;
+            height: 100%; }
+  body main .content {
+    padding-top: 107px; }
+  body main footer form {
+    text-align: center; }
+    body main footer form .wrapper_form {
+      position: relative;
+      margin: 35px; }
+      body main footer form .wrapper_form .h2_wrapper * {
+        display: inline-block; }
+      body main footer form .wrapper_form .h2_wrapper img {
+        width: 40px; }
+      body main footer form .wrapper_form .h2_wrapper h2 {
+        margin: 10px 0;
+        font-size: 40px; }
+      body main footer form .wrapper_form p {
+        margin: 10px 0px;
+        font-size: 12px; }
+      body main footer form .wrapper_form input[type=email] {
+        margin: 10px;
+        width: 400px;
+        height: 30px;
+        font-size: 25px;
+        border-radius: 6px; }
+        body main footer form .wrapper_form input[type=email]::placeholder {
+          font-size: 25px; }
+      body main footer form .wrapper_form button[type=submit] {
+        position: absolute;
+        background-color: #e38f84;
+        border: none;
+        color: white;
+        margin: 10px;
+        width: 200px;
+        height: 50px; }
+        body main footer form .wrapper_form button[type=submit]:hover {
+          width: 220px; }
+        body main footer form .wrapper_form button[type=submit] p {
+          margin: 0;
+          font-size: 30px; }
+  body main footer .wrapper_comp {
+    padding: 0px 3%;
+    background-color: black; }
+    body main footer .wrapper_comp .companies {
+      padding: 50px 0px; }
+      body main footer .wrapper_comp .companies Figure {
+        width: 150px;
+        display: inline-block;
+        margin: 0px 40px; }
+        body main footer .wrapper_comp .companies Figure img {
+          width: 100%;
+          height: 100%; }
+  body main footer .footer1 {
+    display: none;
+    padding: 10px 0px; }
+    body main footer .footer1 article {
+      vertical-align: top;
+      display: inline-block; }
+    body main footer .footer1 .contact_info {
+      width: 33%;
+      padding: 0px 10px; }
+      body main footer .footer1 .contact_info .p_wrapper {
+        padding: 2px 0px; }
+        body main footer .footer1 .contact_info .p_wrapper * {
+          display: inline-block; }
+        body main footer .footer1 .contact_info .p_wrapper img {
+          border: 1px solid #797979;
+          width: 27px; }
+        body main footer .footer1 .contact_info .p_wrapper p {
+          width: 70%;
+          margin: 0px 10px;
+          font-size: 27px; }
+    body main footer .footer1 .list ul h3 {
+      font-size: 27px;
+      margin: 10px 0px; }
+    body main footer .footer1 .list ul li a {
+      font-size: 27px;
+      color: black;
+      text-decoration: none; }
+      body main footer .footer1 .list ul li a:hover {
+        color: #e38f84; }
+  body main footer .footer2 {
+    background-color: #e38f84;
+    color: white; }
+    body main footer .footer2 * {
+      vertical-align: middle; }
+    body main footer .footer2 p {
+      padding: 10px 0px;
+      display: inline-block;
+      font-size: 20px;
+      width: 240px;
+      padding-left: 20%;
+      margin: 0px; }
+      body main footer .footer2 p a {
+        text-decoration: none; }
+        body main footer .footer2 p a img {
+          width: 20px; }
+  body main #scroll_top {
+    z-index: 6;
+    position: fixed;
+    bottom: 5vh;
+    transition: right .8s;
+    right: -100px;
+    width: 75px;
+    height: 75px; }
+    body main #scroll_top figure {
+      margin: 0px;
+      width: 100%; }
+      body main #scroll_top figure img {
+        border-radius: 6px;
+        opacity: 0.7;
+        transition: opacity .5s;
+        width: 100%;
+        height: 100%; }
+      body main #scroll_top figure:hover img {
+        opacity: 1; }
+
+@media only screen and (min-device-width: 700px) {
+  body main nav .logo {
+    width: 200px; }
+  body main nav .menu {
+    margin-left: 24.5%; }
+    body main nav .menu button {
+      height: 88px;
+      width: 88px; }
+    body main nav .menu .menu_content {
+      bottom: -379px; }
+  body main nav .search input[type=search] {
+    width: 200px;
+    height: 23px; }
+    body main nav .search input[type=search]::placeholder {
+      font-size: 15px; }
+  body main nav .search button {
+    height: 30px;
+    width: 30px; }
+  body main .content {
+    padding-top: 87px; }
+  body main footer form .wrapper_form .h2_wrapper img {
+    width: 30px; }
+  body main footer form .wrapper_form .h2_wrapper h2 {
+    margin: 5px 0px;
+    font-size: 30px; }
+  body main footer form .wrapper_form p {
+    font-size: 15px; }
+  body main footer form .wrapper_form input[type=email] {
+    width: 300px;
+    height: 25px;
+    font-size: 18px; }
+    body main footer form .wrapper_form input[type=email]::placeholder {
+      font-size: 18px; }
+  body main footer form .wrapper_form button[type=submit] {
+    width: 150px;
+    height: 40px; }
+    body main footer form .wrapper_form button[type=submit] p {
+      font-size: 25px; }
+    body main footer form .wrapper_form button[type=submit]:hover {
+      width: 165px; }
+  body main footer .footer1 {
+    display: block; }
+    body main footer .footer1 .contact_info {
+      padding: 0px 15px; }
+      body main footer .footer1 .contact_info .p_wrapper * {
+        vertical-align: middle; }
+      body main footer .footer1 .contact_info .p_wrapper img {
+        width: 15px;
+        padding: 5px; }
+      body main footer .footer1 .contact_info .p_wrapper p {
+        font-size: 20px; }
+    body main footer .footer1 .list {
+      width: 30%; }
+      body main footer .footer1 .list ul h3 {
+        font-size: 20px; }
+      body main footer .footer1 .list ul li a {
+        font-size: 20px; }
+  body main #scroll_top {
+    height: 60px; }
+    body main #scroll_top figure {
+      width: 80%; } }
+@media only screen and (min-device-width: 1000px) {
+  body main nav .menu {
+    margin-left: 0;
+    position: static; }
+    body main nav .menu button {
+      display: none; }
+    body main nav .menu .menu_content {
+      width: 65vw;
+      text-align: center;
+      display: inline-block;
+      position: static; }
+      body main nav .menu .menu_content a {
+        padding: 0px 5px;
+        border-style: none;
+        font-size: 20px;
+        width: auto; }
+      body main nav .menu .menu_content .menu_content_last {
+        border-style: none; }
+      body main nav .menu .menu_content:hover {
+        animation: none; }
+  body main nav .search {
+    right: 50px; }
+    body main nav .search input[type=search] {
+      display: inline-block; }
+    body main nav .search button {
+      height: 25px;
+      width: 25px; }
+  body main footer form .wrapper_form .h2_wrapper h2 {
+    margin: 0px; }
+  body main footer form .wrapper_form p {
+    font-size: 15px; }
+  body main footer form .wrapper_form input[type=email] {
+    width: 250px;
+    height: 20px;
+    font-size: 16px; }
+    body main footer form .wrapper_form input[type=email]::placeholder {
+      font-size: 16px; }
+  body main footer form .wrapper_form button[type=submit] {
+    width: 100px;
+    height: 30px; }
+    body main footer form .wrapper_form button[type=submit] p {
+      font-size: 20px; }
+    body main footer form .wrapper_form button[type=submit]:hover {
+      width: 110px; }
+  body main footer .footer1 {
+    margin: 0px 17%; }
+    body main footer .footer1 .contact_info .p_wrapper img {
+      width: 12px; }
+    body main footer .footer1 .contact_info .p_wrapper p {
+      font-size: 17px; }
+    body main footer .footer1 .list ul h3 {
+      font-size: 17px; }
+    body main footer .footer1 .list ul li a {
+      font-size: 17px; }
+  body main footer .footer2 p {
+    font-size: 15px; }
+  body main #scroll_top {
+    bottom: 1vh;
+    width: 60px; }
+    body main #scroll_top figure {
+      width: 75%; } }
+
+/*# sourceMappingURL=nav_footer_style.css.map */

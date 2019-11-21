@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- usual styles -->
+    <link rel="stylesheet" href="/stylesheets/css/nav_footer.css">
+    <link rel="stylesheet" href="/stylesheets/css/main.css">
+    <style media="screen">
+      .archive_page{
+        color: red;
+      }
+      /* to fix slight problems with bootstrap */
+        .nav_link{
+          margin-bottom: 2px;
+        }
+        .static_nav{
+          padding-top: 4px;
+        }
+        .sign_button{
+          margin: 15% 0px !important;
+        }
+        .or{
+          padding-top: 11px;
+        }
+        .signedIn{
+          padding-top: 8px !important;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <% include templates/nav.ejs %>
+      <!-- display all blog posts -->
+      <div class="container">
+        <h2 class="h2">Archive:</h2>
+        <div class="row">
+          <% if (posts.length != 0){ %>
+            <% posts.forEach(function(posts){ %>
+              <div class="panel panel-primary col-xs-6">
+                <div class="panel-heading">
+                  <h2 class="panel-title"><%= posts.title %></h2>
+                  <br>
+                  <h2 class="panel-title"><%= posts.date %></h2>
+
+                </div>
+                <div class="panel-body">
+                  <%- posts.description %>
+                </div>
+                <div class="panel-footer">
+                  <p>Author: <%= posts.author %></p>
+                  <div class="edit_delete">
+                    <a href="/view/<%- posts.id %>"><button type="button" name="button" class="edit_button"><p>Read More</p></button></a>
+                    <%if(user == posts.author){%>
+                      <a href="/edit/<%- posts.id %>"><button type="button" name="button" class="edit_button"><p>Edit</p></button></a>
+                      <a href='/delete/<%- posts.id%>'>
+                        <button type="button" name="button" class="edit_button"><p>Delete</p></button></a>
+                    <%}%>
+                  </div>
+                </div>
+              </div>
+
+            <% }); %>
+          <% } else{ %>
+            <p>No available blog posts!</p>
+          <% }  %>
+        </div>
+      </div>
+      <% include templates/footer.ejs %>
+    </main>
+  </body>
+</html>

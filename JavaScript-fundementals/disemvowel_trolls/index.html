@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <textarea name="name" rows="8" cols="80" id="textarea"></textarea>
+    <button type="button" name="button" id="button">click</button>
+
+    <script type="text/javascript">
+      'use strict';
+
+      document.getElementById('button').addEventListener('click',function(){
+
+        let text = document.getElementById('textarea').value;
+        // runs thru the text
+        for(let i = 0;i<text.length;i++){
+          // if a vowel then remove
+          if(text.charAt(i) == 'a' || text.charAt(i) == 'A' || text.charAt(i) == 'e' ||text.charAt(i) == 'E' || text.charAt(i) == 'i' || text.charAt(i) == 'I' || text.charAt(i) == 'o' || text.charAt(i) == 'O' || text.charAt(i) == 'u' || text.charAt(i) == 'U' ){
+            text = text.substr(0,i)+ text.substr(i+1);
+            // to get rid of cosecutive vowels
+            i--;
+            console.log(text);
+          };
+        };
+        document.getElementById('textarea').value = text;
+      });
+    </script>
+  </body>
+</html>

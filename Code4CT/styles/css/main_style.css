@@ -1,0 +1,399 @@
+/* comments in .scss file*/
+body main .content header {
+  height: 600px;
+  position: relative; }
+  body main .content header .slideshow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden; }
+    body main .content header .slideshow #slide_wrapper {
+      transition: margin-left 1s;
+      margin-left: -100vw;
+      white-space: nowrap;
+      width: 300vw;
+      height: 100%; }
+      body main .content header .slideshow #slide_wrapper .slide {
+        float: left;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        width: 100vw; }
+        body main .content header .slideshow #slide_wrapper .slide img {
+          width: 100%;
+          height: 100%; }
+  body main .content header section {
+    position: absolute;
+    top: 0px;
+    height: 100%; }
+    body main .content header section .intro_wrapper {
+      height: 80%;
+      padding: 5% 10%; }
+      body main .content header section .intro_wrapper .wrapper_content_intro {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: 100%; }
+        body main .content header section .intro_wrapper .wrapper_content_intro .intro {
+          color: white;
+          background-color: #00000066; }
+          body main .content header section .intro_wrapper .wrapper_content_intro .intro h1 {
+            font-size: 35px; }
+          body main .content header section .intro_wrapper .wrapper_content_intro .intro p {
+            font-size: 33px;
+            margin: 0; }
+        body main .content header section .intro_wrapper .wrapper_content_intro .buttons {
+          position: absolute;
+          bottom: 10%;
+          left: 19%; }
+          body main .content header section .intro_wrapper .wrapper_content_intro .buttons a button {
+            height: 38px;
+            width: 200px;
+            color: white;
+            margin-top: 10px;
+            font-size: 30px;
+            border: 2px solid white;
+            background-color: #00000066; }
+            body main .content header section .intro_wrapper .wrapper_content_intro .buttons a button:hover {
+              width: 220px; }
+          body main .content header section .intro_wrapper .wrapper_content_intro .buttons a .button1 {
+            width: 204;
+            height: 38px;
+            border: none;
+            background-color: #e38f84c4; }
+  body main .content header .selectors {
+    position: absolute;
+    bottom: 10px;
+    left: 44vw; }
+    body main .content header .selectors .select {
+      margin: 0px 2px;
+      display: inline-block;
+      width: 40px;
+      height: 7px;
+      background-color: #d4d4d4b0;
+      border-radius: 3px; }
+    body main .content header .selectors #select1 {
+      height: 15px;
+      background-color: #e38f84c4; }
+body main .content section {
+  padding: 0px 10%; }
+body main .content .about_us {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  body main .content .about_us article {
+    margin-bottom: 80px;
+    grid-column: 1/3;
+    grid-row: 1/2; }
+    body main .content .about_us article p {
+      font-size: 12px; }
+    body main .content .about_us article h2 {
+      font-size: 23px; }
+      body main .content .about_us article h2 .span1 {
+        border-bottom: 3px solid #e38f84; }
+      body main .content .about_us article h2 .span2 {
+        border-bottom: 2px solid #797979; }
+    body main .content .about_us article .about_head {
+      font-weight: bold; }
+    body main .content .about_us article button {
+      position: absolute;
+      background-color: #e38f84;
+      border: none;
+      color: white;
+      margin: 10px;
+      width: 200px;
+      height: 50px; }
+      body main .content .about_us article button:hover {
+        width: 220px; }
+      body main .content .about_us article button p {
+        margin: 0;
+        font-size: 20px; }
+  body main .content .about_us .images {
+    padding: 0px 15%;
+    grid-column: 1/3;
+    grid-row: 2/3; }
+    body main .content .about_us .images figure img {
+      width: 100%;
+      height: 100%; }
+body main .content .three_icons {
+  background-color: black;
+  color: white;
+  text-align: center; }
+  body main .content .three_icons article figure {
+    margin: 0px 25%;
+    margin-top: 10px;
+    width: 50%; }
+    body main .content .three_icons article figure img {
+      width: 100%;
+      height: 100%; }
+  body main .content .three_icons article h3 {
+    margin-top: 0px;
+    font-size: 30px; }
+  body main .content .three_icons article p {
+    padding: 0px 7%;
+    font-size: 13px; }
+body main .content .portfolio article p {
+  font-size: 12px; }
+body main .content .portfolio article h2 {
+  font-size: 23px; }
+  body main .content .portfolio article h2 .span1 {
+    border-bottom: 3px solid #e38f84; }
+  body main .content .portfolio article h2 .span2 {
+    border-bottom: 2px solid #797979; }
+body main .content .portfolio .image_portfolio figure {
+  margin: 0px;
+  overflow: hidden;
+  width: 80%;
+  padding: 0px 10%; }
+  body main .content .portfolio .image_portfolio figure img {
+    width: 100%;
+    height: 100%; }
+body main .content .meet_the_team {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  body main .content .meet_the_team .intro {
+    grid-column: 1/5;
+    grid-row: 1/2; }
+    body main .content .meet_the_team .intro h2 .span1 {
+      border-bottom: 3px solid #e38f84; }
+    body main .content .meet_the_team .intro h2 .span2 {
+      border-bottom: 2px solid #797979; }
+  body main .content .meet_the_team figure {
+    width: 40vw; }
+    body main .content .meet_the_team figure img {
+      border-radius: 6px;
+      width: 100%;
+      height: 100%; }
+  body main .content .meet_the_team .staff .position {
+    font-size: 13px;
+    color: grey;
+    padding-bottom: 20px;
+    border-bottom: lightgrey solid 1px; }
+  body main .content .meet_the_team .fig1 {
+    grid-column: 1/3;
+    grid-row: 2/3; }
+  body main .content .meet_the_team .staff1 {
+    grid-column: 1/3;
+    grid-row: 3/4; }
+  body main .content .meet_the_team .fig2 {
+    grid-column: 1/3;
+    grid-row: 4/5; }
+  body main .content .meet_the_team .staff2 {
+    grid-column: 1/3;
+    grid-row: 5/6; }
+  body main .content .meet_the_team .fig3 {
+    grid-column: 1/3;
+    grid-row: 6/7; }
+  body main .content .meet_the_team .staff3 {
+    grid-column: 1/3;
+    grid-row: 7/8; }
+  body main .content .meet_the_team .fig4 {
+    grid-column: 1/3;
+    grid-row: 8/9; }
+  body main .content .meet_the_team .staff4 {
+    grid-column: 1/3;
+    grid-row: 9/10; }
+body main .content .up_counter {
+  padding: 30px 0px;
+  background-color: black;
+  color: white; }
+  body main .content .up_counter .counter_wrapper {
+    text-align: center; }
+    body main .content .up_counter .counter_wrapper h2 {
+      margin: 100px 0px;
+      font-size: 125px; }
+      body main .content .up_counter .counter_wrapper h2 .counter {
+        border-top: 2px solid #e38f84; }
+
+@media only screen and (min-device-width: 700px) {
+  body main .content header section .intro_wrapper .wrapper_content_intro .intro h1 {
+    font-size: 33px; }
+  body main .content header section .intro_wrapper .wrapper_content_intro .intro p {
+    font-size: 20px;
+    padding-bottom: 50px; }
+  body main .content section {
+    padding: 0px 7%; }
+  body main .content .about_us article {
+    grid-column: 1/2;
+    grid-row: 1/2; }
+    body main .content .about_us article h2 {
+      font-size: 25px; }
+    body main .content .about_us article button {
+      width: 150px;
+      height: 40px; }
+      body main .content .about_us article button p {
+        font-size: 20px; }
+      body main .content .about_us article button:hover {
+        width: 165px; }
+  body main .content .about_us .images {
+    padding: 10% 5%;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 1/2; }
+    body main .content .about_us .images figure {
+      display: inline-block;
+      margin: 2%;
+      width: 45%; }
+  body main .content .three_icons article {
+    vertical-align: top;
+    display: inline-block;
+    width: 30%; }
+    body main .content .three_icons article h3 {
+      font-size: 25px; }
+    body main .content .three_icons article p {
+      font-size: 18px; }
+  body main .content .portfolio {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    body main .content .portfolio article h2 {
+      font-size: 25px; }
+    body main .content .portfolio .image_portfolio {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); }
+      body main .content .portfolio .image_portfolio .fig1 {
+        grid-column: 1/3;
+        grid-row: 1/2; }
+      body main .content .portfolio .image_portfolio .fig2 {
+        grid-column: 3/5;
+        grid-row: 1/2; }
+      body main .content .portfolio .image_portfolio .fig3 {
+        grid-column: 1/3;
+        grid-row: 2/3; }
+      body main .content .portfolio .image_portfolio .fig4 {
+        grid-column: 3/5;
+        grid-row: 2/3; }
+      body main .content .portfolio .image_portfolio .fig5 {
+        grid-column: 1/5;
+        grid-row: 3/4; }
+      body main .content .portfolio .image_portfolio figure {
+        margin: 2px;
+        width: 99%;
+        padding: 0px; }
+  body main .content .meet_the_team figure {
+    width: 80%; }
+  body main .content .meet_the_team .fig1 {
+    grid-column: 1/2;
+    grid-row: 2/3; }
+  body main .content .meet_the_team .staff1 {
+    grid-column: 2/3;
+    grid-row: 2/3; }
+  body main .content .meet_the_team .fig2 {
+    grid-column: 1/2;
+    grid-row: 3/4; }
+  body main .content .meet_the_team .staff2 {
+    grid-column: 2/3;
+    grid-row: 3/4; }
+  body main .content .meet_the_team .fig3 {
+    grid-column: 1/2;
+    grid-row: 4/5; }
+  body main .content .meet_the_team .staff3 {
+    grid-column: 2/3;
+    grid-row: 4/5; }
+  body main .content .meet_the_team .fig4 {
+    grid-column: 1/2;
+    grid-row: 5/6; }
+  body main .content .meet_the_team .staff4 {
+    grid-column: 2/3;
+    grid-row: 5/6; }
+  body main .content .up_counter .counter_wrapper {
+    display: inline-block;
+    width: 49%; }
+    body main .content .up_counter .counter_wrapper h2 {
+      font-size: 60px;
+      margin: 60px 0px; }
+    body main .content .up_counter .counter_wrapper h3 {
+      font-size: 26px; } }
+@media only screen and (min-device-width: 1020px) {
+  body main .content header {
+    height: 580px; }
+    body main .content header section .intro_wrapper {
+      padding: 5% 16%; }
+      body main .content header section .intro_wrapper .wrapper_content_intro .buttons {
+        left: 20%;
+        bottom: 20%; }
+    body main .content header .selectors {
+      bottom: 15px;
+      left: 41vw; }
+      body main .content header .selectors .select {
+        width: 50px; }
+  body main .content .about_us article h2 {
+    font-size: 25px; }
+  body main .content .about_us article p {
+    font-size: 17px; }
+  body main .content .about_us article button {
+    width: 100px;
+    height: 30px; }
+    body main .content .about_us article button p {
+      font-size: 15px; }
+    body main .content .about_us article button:hover {
+      width: 110px; }
+  body main .content .three_icons article figure {
+    margin: 0px 30%;
+    width: 40%; }
+  body main .content .three_icons article h3 {
+    font-size: 20px; }
+  body main .content .three_icons article p {
+    font-size: 15px;
+    padding-bottom: 15px; }
+  body main .content .portfolio article h2 {
+    font-size: 25px; }
+  body main .content .portfolio article p {
+    font-size: 17px;
+    padding-bottom: 20px; }
+  body main .content .portfolio .image_portfolio .fig1 {
+    grid-column: 1/2;
+    grid-row: 1/2; }
+  body main .content .portfolio .image_portfolio .fig2 {
+    grid-column: 2/3;
+    grid-row: 1/2; }
+  body main .content .portfolio .image_portfolio .fig3 {
+    grid-column: 1/2;
+    grid-row: 2/3; }
+  body main .content .portfolio .image_portfolio .fig4 {
+    grid-column: 2/3;
+    grid-row: 2/3; }
+  body main .content .portfolio .image_portfolio .fig5 {
+    grid-column: 3/5;
+    grid-row: 1/4; }
+  body main .content .portfolio .image_portfolio figure {
+    width: 97%;
+    margin: 0px 3%; }
+  body main .content .meet_the_team {
+    grid-template-columns: repeat(4, 1fr); }
+    body main .content .meet_the_team figure, body main .content .meet_the_team .staff {
+      display: inline-block; }
+    body main .content .meet_the_team figure {
+      margin-left: 10px;
+      width: 80%; }
+    body main .content .meet_the_team .fig1 {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    body main .content .meet_the_team .staff1 {
+      grid-column: 2/3;
+      grid-row: 2/3; }
+    body main .content .meet_the_team .fig2 {
+      grid-column: 3/4;
+      grid-row: 2/3; }
+    body main .content .meet_the_team .staff2 {
+      grid-column: 4/5;
+      grid-row: 2/3; }
+    body main .content .meet_the_team .fig3 {
+      grid-column: 1/2;
+      grid-row: 3/4; }
+    body main .content .meet_the_team .staff3 {
+      grid-column: 2/3;
+      grid-row: 3/4; }
+    body main .content .meet_the_team .fig4 {
+      grid-column: 3/4;
+      grid-row: 3/4; }
+    body main .content .meet_the_team .staff4 {
+      grid-column: 4/5;
+      grid-row: 3/4; }
+  body main .content .up_counter .counter_wrapper {
+    width: 24%; }
+    body main .content .up_counter .counter_wrapper h2 {
+      font-size: 45px;
+      margin: 30px 0px; }
+    body main .content .up_counter .counter_wrapper h3 {
+      font-size: 20px; } }
+
+/*# sourceMappingURL=main_style.css.map */

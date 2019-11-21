@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <input type="text" name="" value="Harry" id="first_name" placeholder="Harry, ...">
+    <select id="prop" name="">
+      <option value="0" disabled selected>properties</option>
+      <option value="likes">Likes</option>
+      <option value="dislikes">Dislikes</option>
+    </select>
+    <button id="button" type="button" name="button">submit</button>
+    <div id="results"></div>
+
+
+    <script type="text/javascript">
+      'use strict';
+
+      document.getElementById('button').addEventListener('click',getResults)
+
+
+      // the object
+      var characters = [
+          {
+              "firstName": "Harry",
+              "lastName": "Potter",
+              "likes": ["Hogwarts", "Magic", "Hagrid"],
+              "dislikes": ["Voldemort", "Moaning Myrtle", "Dementors"],
+          },
+          {
+              "firstName": "Ron",
+              "lastName": "Weasley",
+              "likes": ["Hogwarts", "Magic", "Hermione"],
+              "dislikes": ["Voldemort", "Severus Snape", "Severus Snape"],
+          },
+          {
+              "firstName": "Hermione",
+              "lastName": "Granger",
+              "likes": ["Hogwarts", "Magic", "Harry"],
+              "dislikes": ["Voldemort", "Ron", "Dementors"],
+          },
+          {
+              "firstName": "Severus",
+              "lastName": "Snape",
+              "likes": ["Hogwarts", "Magic", "Dumbledore"],
+              "dislikes": ["Voldemort", "Harry", "Hagrid"],
+          },
+      //add at least 3 other harry potter characters here
+      ];
+
+      // this function
+      function getResults() {
+
+        // the variables
+        let firstName = document.getElementById('first_name').value;
+        let prop = document.getElementById('prop').value;
+
+        document.getElementById('results').innerHTML = "";
+        function lookUp(firstName, prop){
+          // loops thru the array
+          for(let i in characters){
+
+            if (firstName == characters[i].firstName) {
+              console.log(true);
+              if (prop != 0) {
+                // gets the results of likes or dilikes
+                if (prop == "likes") {
+                  document.getElementById('results').innerHTML = characters[i].firstName + " " + characters[i].lastName + " Likes: <br>";
+                  for(let k in characters[i].likes){
+                    document.getElementById('results').innerHTML +="<br>" + characters[i].likes[k]+",";
+                  }
+                  break;
+                }
+                else{
+                  document.getElementById('results').innerHTML = characters[i].firstName + " " + characters[i].lastName + " Dislikes: <br>";
+                  for(let k in characters[i].dislikes){
+                    document.getElementById('results').innerHTML +="<br>"  + characters[i].dislikes[k]+",";
+                  }
+                  break;
+                }
+              }
+              else{
+                // validation
+                document.getElementById('results').innerHTML = "No such property!";
+                break;
+              }
+
+            }
+            else{
+              // validation
+              document.getElementById('results').innerHTML = "No such character!";
+              // break;
+            }
+
+
+          }
+        }
+
+        lookUp(firstName,prop);
+      }
+    </script>
+  </body>
+</html>
